@@ -10,7 +10,7 @@ from langchain.embeddings import OpenAIEmbeddings
 os.environ["OPENAI_API_BASE"] = ""
 os.environ["OPENAI_API_KEY"] = ""
 
-client = weaviate.Client(url="http://149.28.241.76:8088")
+client = weaviate.Client(url="")
 print(f"+++Weaviate is ready? {client.is_ready()}")
 
 embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
@@ -18,7 +18,7 @@ embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
 model = ChatOpenAI(model="gpt-3.5-turbo-0613", temperature=0, max_tokens=1024)
 vectorstore = Weaviate(
     client=client,
-    index_name="LangChain_a95eb91a363145d68aa5fb7c9d151e00",
+    index_name="",
     embedding=embeddings,
     text_key="text",
 )
