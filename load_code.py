@@ -35,5 +35,7 @@ print(query_result[:5])
 doc_result = embeddings.embed_documents([text])
 print(doc_result[0][:5])
 
-vectorstore = Weaviate.from_documents(texts, embeddings, client=client, by_text=False)
-print(vectorstore)
+vectorstore = Weaviate.from_documents(
+    texts, embeddings, client=client, by_text=False, index_name="Lcpe"
+)
+print(f"+++Vector BD indext name:  {vectorstore._index_name}")
