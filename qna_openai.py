@@ -18,15 +18,19 @@ embeddings = OpenAIEmbeddings(model="text-embedding-ada-002")
 model = ChatOpenAI(model="gpt-3.5-turbo-0613", temperature=0, max_tokens=1024)
 vectorstore = Weaviate(
     client=client,
-    index_name="",
+    index_name="Lcpe",
     embedding=embeddings,
     text_key="text",
 )
-retriever = vectorstore.as_retriever()
+print(f"+++Vector BD indext name:  {vectorstore._index_name}")
+print(vectorstore._client.schema.get())
+
+retriever = vectorstore.as_retriever(search_type="mmr")
 memory = ConversationSummaryMemory(llm=model, memory_key="chat_history")
 qa = ConversationalRetrievalChain.from_llm(model, retriever=retriever, memory=memory)
-query = "what is the code about?"
+# query = "what is the code about?"
+query = "Describe the planner related code?"
+result = qa(query)
+print(result["answer"])
 # docs = vectorstore.similarity_search_by_text(query)
 # print(docs[0].page_content)
-
-print(vectorstore._client.schema.get())
