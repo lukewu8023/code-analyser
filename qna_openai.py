@@ -21,16 +21,20 @@ vectorstore = Weaviate(
     index_name="Lcpe",
     embedding=embeddings,
     text_key="text",
+    by_text=False,
 )
 print(f"+++Vector BD indext name:  {vectorstore._index_name}")
-print(vectorstore._client.schema.get())
+# print(vectorstore._client.schema.get())
 
-retriever = vectorstore.as_retriever(search_type="mmr")
-memory = ConversationSummaryMemory(llm=model, memory_key="chat_history")
+query = "how the code do plan and execution?"
+docs = vectorstore.similarity_search(query)
+print(docs[0].page_content)
+
+retriever = vectorstore.as_retriever()
+memory = ConversationSummaryMemory(
+    llm=model, memory_key="chat_history", return_messages=True
+)
 qa = ConversationalRetrievalChain.from_llm(model, retriever=retriever, memory=memory)
-# query = "what is the code about?"
-query = "Describe the planner related code?"
-result = qa(query)
+# result = qa(query)
+result = qa({"question": query, "chat_history": []})
 print(result["answer"])
-# docs = vectorstore.similarity_search_by_text(query)
-# print(docs[0].page_content)

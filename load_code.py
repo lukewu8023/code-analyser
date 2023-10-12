@@ -8,7 +8,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import Weaviate
 
-code_path = ""
+code_path = "/Users/luke/Documents/workspace/gpt/langchain/libs/experimental/langchain_experimental/plan_and_execute"
 loader = GenericLoader.from_filesystem(
     code_path,
     glob="**/*",

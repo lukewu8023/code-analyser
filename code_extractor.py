@@ -4,20 +4,20 @@ from langchain.document_loaders.parsers import LanguageParser
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
 loader = GenericLoader.from_filesystem(
-    "",
+    "/Users/luke/Documents/workspace/gpt/langchain/libs/experimental/langchain_experimental/plan_and_execute",
     glob="**/*",
     suffixes=[".py"],
-    parser=LanguageParser(language=Language.PYTHON, parser_threshold=500),
+    parser=LanguageParser(),
 )
 
 documents = loader.load()
-print(documents)
+print(len(documents))
 for document in documents:
     name = document.metadata["source"]
     code = document.page_content
 
 python_splitter = RecursiveCharacterTextSplitter.from_language(
-    language=Language.PYTHON, chunk_size=2000, chunk_overlap=200
+    language=Language.PYTHON
 )
 
 texts = python_splitter.split_documents(documents)
