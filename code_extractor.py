@@ -1,6 +1,6 @@
 import os
 from langchain import PromptTemplate
-import openai_config
+import key_config
 
 from langchain.chat_models import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate

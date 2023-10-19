@@ -1,7 +1,7 @@
 import os
 import json
 import weaviate
-import openai_config
+import key_config
 
 from langchain.embeddings import OpenAIEmbeddings
 

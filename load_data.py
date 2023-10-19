@@ -1,7 +1,7 @@
 import json
 import os
 import weaviate
-import openai_config
+import key_config
 
 from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI

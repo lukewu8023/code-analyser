@@ -1,6 +1,6 @@
 import os
 import weaviate
-import openai_config
+import key_config
 
 from langchain.text_splitter import Language
 from langchain.document_loaders.generic import GenericLoader

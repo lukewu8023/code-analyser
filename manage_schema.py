@@ -1,7 +1,7 @@
 import json
 import os
 import weaviate
-import openai_config
+import key_config
 
 client = weaviate.Client(os.environ.get("WEAVIATE_URL"))
 
