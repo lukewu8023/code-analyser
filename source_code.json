@@ -1,0 +1,32 @@
+{
+  "methods": [
+    {
+      "method_name": "evolvePopulation",
+      "package_name": "ch.epfl.bigdata.ts.genalg",
+      "class_name": "Algorithm",
+      "parameters": ["pop"],
+      "method_desc": "This method evolves the population by performing crossover and mutation operations. It takes a Population object as input and returns a new Population object. The method first creates a new Population object with the same size as the input population. If the ELITISM constant is set to true, the best individual from the input population is saved in the new population. Then, for each individual in the new population (starting from the elitism offset), two individuals are selected using the tournamentSelection method. These two individuals are then crossed over to create a new individual, which is saved in the new population. Finally, the new population is mutated by calling the mutate method on each individual."
+    },
+    {
+      "method_name": "crossover",
+      "package_name": "ch.epfl.bigdata.ts.genalg",
+      "class_name": "Algorithm",
+      "parameters": ["indiv1", "indiv2"],
+      "method_desc": "This private method performs crossover between two individuals. It takes two Individual objects as input and returns a new Individual object. The method creates a new Individual object and loops through the genes of the input individuals. For each gene, a random number is generated and compared to the UNIFORM_RATE constant. If the random number is less than or equal to the UNIFORM_RATE, the gene from indiv1 is copied to the new individual. Otherwise, the gene from indiv2 is copied. The new individual is then returned."
+    },
+    {
+      "method_name": "mutate",
+      "package_name": "ch.epfl.bigdata.ts.genalg",
+      "class_name": "Algorithm",
+      "parameters": ["indiv"],
+      "method_desc": "This private method mutates the genes of an individual. It takes an Individual object as input and does not return anything. The method loops through the genes of the individual and for each gene, a random number is generated. If the random number is less than or equal to the MUTATION_RATE constant, the gene is regenerated using the generate_gene method of the individual."
+    },
+    {
+      "method_name": "tournamentSelection",
+      "package_name": "ch.epfl.bigdata.ts.genalg",
+      "class_name": "Algorithm",
+      "parameters": ["pop"],
+      "method_desc": "This private method performs tournament selection to select an individual for crossover. It takes a Population object as input and returns an Individual object. The method first creates a tournament population with a size of TOURNAMENT_SIZE. Then, for each place in the tournament population, a random individual is selected from the input population and saved in the tournament population. Finally, the fittest individual from the tournament population is returned."
+    }
+  ]
+}
