@@ -1,0 +1,218 @@
+{
+  "methods": [
+    {
+      "method_name": "contextLoads",
+      "package_name": "com.example.demo",
+      "class_name": "DemoApplicationTests",
+      "parameters": [],
+      "method_desc": "This method is used to test the loading of the application context."
+    },
+    {
+      "method_name": "main",
+      "package_name": "com.example.demo",
+      "class_name": "DemoApplication",
+      "parameters": "String[] args",
+      "method_desc": "This is the main method of the DemoApplication class. It is the entry point of the application. It takes an array of strings as an argument, which can be used to pass command line arguments to the application. In this method, the SpringApplication.run() method is called to start the Spring Boot application."
+    },
+    {
+      "method_name": ["Getter", "Setter"],
+      "package_name": "com.example.demo.entity",
+      "class_name": "Identifier",
+      "parameters": [[], []],
+      "method_desc": [
+        "This method is a getter method for the 'concept' attribute of the Identifier class.",
+        "This method is a getter method for the 'attributeValue' attribute of the Identifier class."
+      ]
+    },
+    {
+      "method_name": "Response",
+      "package_name": "com.example.demo.entity",
+      "class_name": "Response",
+      "parameters": ["productId"],
+      "method_desc": "This class represents a response object. It has a single constructor that takes an Integer parameter called 'productId'. This constructor is annotated with the 'AllArgsConstructor' annotation from the Lombok library, which generates a constructor with all the class fields as parameters. The 'Getter' and 'Setter' annotations are also used to generate getter and setter methods for the 'productId' field."
+    },
+    {
+      "method_name": "EnumType",
+      "package_name": "com.example.demo.entity",
+      "class_name": "EnumType",
+      "parameters": [
+        {
+          "name": "tableName",
+          "type": "String"
+        },
+        {
+          "name": "fieldName",
+          "type": "String"
+        }
+      ],
+      "method_desc": "This is the constructor method of the EnumType class. It takes two parameters, tableName and fieldName, both of type String. The constructor initializes the tableName and fieldName properties of the EnumType enum."
+    },
+    {
+      "method_name": ["Getter", "Setter", "AllArgsConstructor"],
+      "package_name": "com.example.demo.entity",
+      "class_name": "Attribute",
+      "parameters": {
+        "Getter": [],
+        "Setter": [],
+        "AllArgsConstructor": [
+          "Integer dcaId",
+          "String fieldName",
+          "String name"
+        ]
+      },
+      "method_desc": {
+        "Getter": "This method is a getter method for the 'dcaId' attribute.",
+        "Setter": "This method is a setter method for the 'dcaId' attribute.",
+        "AllArgsConstructor": "This method is an all-args constructor for the Attribute class. It takes three parameters: 'dcaId' of type Integer, 'fieldName' of type String, and 'name' of type String."
+      }
+    },
+    {
+      "method_name": ["Getter", "Setter"],
+      "package_name": "com.example.demo.entity",
+      "class_name": "Concept",
+      "parameters": [],
+      "method_desc": {
+        "Getter": "This method is used to get the value of the enumType attribute.",
+        "Setter": "This method is used to set the value of the enumType attribute."
+      }
+    },
+    {
+      "method_name": "insert",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "sql",
+          "type": "String"
+        }
+      ],
+      "method_desc": "This method is used to insert data into the database. It takes a SQL query as a parameter and executes it."
+    },
+    {
+      "method_name": "select",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "sql",
+          "type": "String"
+        }
+      ],
+      "method_desc": "This method is used to execute a select query on the database. It takes a SQL query as a parameter and returns a list of maps containing the selected data."
+    },
+    {
+      "method_name": "selectDCByDCTable",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "table",
+          "type": "String"
+        }
+      ],
+      "method_desc": "This method is used to select a DC object based on the given table name. It takes a table name as a parameter and returns a DC object."
+    },
+    {
+      "method_name": "selectDCAByDCId",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "dcId",
+          "type": "Integer"
+        }
+      ],
+      "method_desc": "This method is used to select a list of DCA objects based on the given DC ID. It takes a DC ID as a parameter and returns a list of DCA objects."
+    },
+    {
+      "method_name": "selectMapping",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [],
+      "method_desc": "This method is used to select a list of Mapping objects. It does not take any parameters and returns a list of Mapping objects."
+    },
+    {
+      "method_name": "findMaxPin",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [],
+      "method_desc": "This method is used to find the maximum pin value. It does not take any parameters and returns an Integer value."
+    },
+    {
+      "method_name": "processVin",
+      "package_name": "com.example.demo.controller",
+      "class_name": "ProcessController",
+      "parameters": [],
+      "method_desc": "This method is a GET request handler for the root URL \"/\". It returns a Response object by calling the link() method of the Process service."
+    },
+    {
+      "method_name": ["Getter", "Setter"],
+      "package_name": "com.example.demo.model",
+      "class_name": "DCA",
+      "parameters": [],
+      "method_desc": [
+        "Getter: This method is used to get the value of the dcaId field.",
+        "Setter: This method is used to set the value of the dcaId field."
+      ]
+    },
+    {
+      "method_name": ["Getter", "Setter"],
+      "package_name": "com.example.demo.model",
+      "class_name": "Mapping",
+      "parameters": [],
+      "method_desc": {
+        "Getter": "This method is a getter method for the private field 'vinDCAId'. It returns the value of 'vinDCAId'.",
+        "Setter": "This method is a setter method for the private field 'vinDCAId'. It sets the value of 'vinDCAId' to the provided parameter."
+      }
+    },
+    {
+      "method_name": ["Getter", "Setter"],
+      "package_name": "com.example.demo.model",
+      "class_name": "DC",
+      "parameters": [],
+      "method_desc": [
+        "Getter method for dcId field",
+        "Setter method for dcId field",
+        "Getter method for table field",
+        "Setter method for table field",
+        "Getter method for name field",
+        "Setter method for name field"
+      ]
+    },
+    {
+      "method_name": "getSt",
+      "package_name": "com.example.demo.service",
+      "class_name": "VendorWrite",
+      "parameters": ["concept", "vin"],
+      "method_desc": "This method retrieves an Identifier object based on a Concept and a VIN. It first creates an empty Identifier object and a HashMap to store Attribute-Value pairs. Then, it constructs a SQL query using the table name from the Concept's EnumType and the provided VIN. The query is executed using the SQLProcess's select method, and the first result is retrieved. The method then iterates over the Concept's columns and adds the corresponding Attribute-Value pair to the HashMap. Finally, the HashMap is set as the AttributeValue of the Identifier object, which is returned."
+    },
+    {
+      "method_name": "link",
+      "package_name": "com.example.demo.service",
+      "class_name": "Process",
+      "parameters": [],
+      "method_desc": "This method is used to link the vendor and product data. It performs the following steps:\n\n1. Retrieves the maximum pin value from the SQLProcess and increments it by 1 to get the new pin value.\n2. Retrieves the concept schema for the VENDOR entity and creates a map of attribute IDs to attributes.\n3. Retrieves the concept schema for the PRODUCT entity and creates a map of attribute IDs to attributes.\n4. Retrieves the vendor identifier for the given vin value.\n5. Retrieves the mappings from the initService.\n6. Creates a map of attributes to values for the pin identifier by iterating over the mappings and retrieving the corresponding attribute values from the vin identifier.\n7. Creates a new pin identifier with the pinConcept and the attribute-value map.\n8. Generates the insert statement for the pin identifier by replacing the placeholders with the pin value and attribute values.\n9. Inserts the pin identifier into the database using the SQLProcess.\n10. Returns a new Response object with the pin value."
+    },
+    {
+      "method_name": "init",
+      "package_name": "com.example.demo.service",
+      "class_name": "InitService",
+      "parameters": [],
+      "method_desc": "This method is annotated with @PostConstruct and is called after the bean initialization. It initializes the mappings by calling the selectMapping method of the SQLProcess class. Then, it loads the schema for the VENDOR and PRODUCT enum types by calling the loadSchema method."
+    },
+    {
+      "method_name": "loadSchema",
+      "package_name": "com.example.demo.service",
+      "class_name": "InitService",
+      "parameters": ["enumType"],
+      "method_desc": "This method is called by the init method to load the schema for a given enumType. It creates a new Concept object and sets the enumType. It then retrieves the DC object for the given enumType by calling the selectDCByDCTable method of the SQLProcess class. Next, it retrieves a list of DCA objects for the DC by calling the selectDCAByDCId method of the SQLProcess class. It sets the name of the concept to the name of the DC. It creates a list of Attribute objects by mapping each DCA object to a new Attribute object. Finally, it adds the concept to the conceptSchema map using the enumType as the key. If the enumType is PRODUCT, it also calls the insertSt method of the productWrite object to insert the concept into the database."
+    },
+    {
+      "method_name": "insertSt",
+      "package_name": "com.example.demo.service",
+      "class_name": "ProductWrite",
+      "parameters": ["Concept concept"],
+      "method_desc": "This method is used to generate an SQL insert statement for a given Concept object.\n\nThe method takes a Concept object as a parameter.\n\nIt creates a StringBuilder object to build the SQL statement.\n\nIt appends the table name and the field name of the Concept object's enum type to the StringBuilder.\n\nIt then iterates over the columns of the Concept object and appends their field names to the StringBuilder.\n\nFinally, it appends the values placeholders to the StringBuilder based on the number of columns.\n\nThe generated SQL insert statement is stored in the insertStr attribute of the ProductWrite class."
+    }
+  ]
+}
