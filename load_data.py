@@ -7,7 +7,7 @@ from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.embeddings import OpenAIEmbeddings
 
-with open("source_code.json") as f:
+with open("source_code2.json") as f:
     contents = f.read()
 data = json.loads(contents)
 # f = open("source_code.json")
@@ -35,6 +35,18 @@ with client.batch as batch:
             "class_name": method["class_name"],
             "method_desc": method["method_desc"],
         }
+
+        embed_document = (
+            "method name is "
+            + method["method_name"]
+            + ", package name is "
+            + method["package_name"]
+            + ", class name is "
+            + method["class_name"]
+            + ", method description is "
+            + method["method_desc"]
+        )
+        print(f"+++embed document: {embed_document}")
 
         embeddings = embeddings_model.embed_documents([method["method_desc"]])
         print(len(embeddings[0]))
