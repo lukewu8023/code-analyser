@@ -7,7 +7,7 @@ from langchain import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.embeddings import OpenAIEmbeddings
 
-with open("source_code2.json") as f:
+with open("data/code_cu.json") as f:
     contents = f.read()
 data = json.loads(contents)
 # f = open("source_code.json")
