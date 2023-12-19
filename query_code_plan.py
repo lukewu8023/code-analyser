@@ -10,6 +10,7 @@ from langchain.tools import BaseTool, StructuredTool, Tool, tool
 
 from langchain.embeddings import OpenAIEmbeddings
 
+import key_config
 import get_tools
 
 with open("prompt/prompt_plan.txt") as f:
