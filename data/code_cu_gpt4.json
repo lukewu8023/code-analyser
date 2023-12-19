@@ -1,16 +1,3 @@
-The code provided is a Java test class using the JUnit 5 and Spring Boot testing framework. Here is the extracted information:
-
-1) The package name of the class is "com.example.demo".
-2) The class name is "DemoApplicationTests".
-3) There is one method in the class, named "contextLoads".
-4) The method "contextLoads" does not have any parameters.
-5) No, it is not a method in an interface. It is a method in a class.
-6) The method "contextLoads" does not invoke any other methods in its body.
-7) The method "contextLoads" is a test method (denoted by the @Test annotation) that checks if the application context loads correctly. It does not have a method body, which means it does not perform any actions. If the context fails to load, the test will fail.
-
-Here is the JSON string with the above information:
-
-```json
 {
   "method_name": "contextLoads",
   "package_name": "com.example.demo",
@@ -18,500 +5,439 @@ Here is the JSON string with the above information:
   "parameters": [],
   "is_interface": false,
   "invoked_methods": [],
-  "method_desc": "A test method that checks if the application context loads correctly. It does not perform any actions. If the context fails to load, the test will fail."
+  "method_desc": "The method 'contextLoads' is a test method that doesn't take any parameters. It's annotated with @Test, indicating it's a test case. The method body is empty, which implies that this test case is only ensuring that the Spring application context loads successfully without throwing any exceptions. There are no invoked methods within this method body, and it's not part of an interface."
 }
-```
 {
-"method_name": "main",
-"package_name": "com.example.demo",
-"class_name": "DemoApplication",
-"parameters": ["args"],
-"is_interface": "No",
-"invoked_methods": [
+  "method_name": "main",
+  "package_name": "com.example.demo",
+  "class_name": "DemoApplication",
+  "parameters": ["String[] args"],
+  "is_interface": false,
+  "invoked_methods": [
     {
-        "variable_class_name": "SpringApplication",
-        "variable_name": "SpringApplication",
-        "method_name": "run"
+      "variable_class_name": "SpringApplication",
+      "variable_name": null,
+      "method_name": "run"
     }
-],
-"method_desc": "The main method is the entry point for the application. It takes an array of strings as an argument, which can be command line arguments. The method invokes the 'run' method of the 'SpringApplication' class, passing the class itself and the command line arguments as parameters. The 'run' method starts the Spring Application Context, which is the core of any Spring application."
+  ],
+  "method_desc": "The 'main' method is the entry point of the Spring Boot application. It takes an array of Strings as arguments, which can be used to pass command-line parameters. The method does not return any value as its return type is void. Inside the method body, it invokes the 'run' method of the 'SpringApplication' class, passing 'DemoApplication.class' and 'args' as arguments. This 'run' method is responsible for bootstrapping and launching the Spring application."
 }
-The provided code does not contain any methods, it's a simple class with two attributes. Therefore, it's not possible to provide information about methods, parameters, whether it's an interface, invoked methods, or a description of a single method. 
-
-However, we can provide information about the package name and the class name:
-
 {
-  "package_name": "com.example.demo.entity",
-  "class_name": "Identifier"
+    "method_name": [],
+    "package_name": "com.example.demo.entity",
+    "class_name": "Identifier",
+    "parameters": [],
+    "is_interface": false,
+    "invoked_methods": [],
+    "method_desc": []
 }
-The provided code does not contain any methods, it's a simple class with a single attribute. Therefore, the information extracted from the code is as follows:
-
-1) The package name of the class is "com.example.demo.entity".
-2) The class name is "Response".
-3) There are no methods in this class.
-4) There are no parameters of method as there are no methods.
-5) It is not a method in an interface as there are no methods.
-6) There are no invoked methods this method is invoking in the method body, as there are no methods.
-7) There is no description of a single method, as there are no methods.
-
-The JSON string with the above information would look like this:
-
 {
-  "method_name": "",
   "package_name": "com.example.demo.entity",
   "class_name": "Response",
-  "parameters": "",
-  "is_interface": "false",
-  "invoked_methods": "",
-  "method_desc": ""
-}
-The given code is an enumeration in Java, not a class. Enumerations in Java are a type of class that have a fixed set of constants. They do not have methods in the traditional sense, but they do have constructors and fields. Here is the information extracted from the code:
-
-1) The package name of the enumeration is "com.example.demo.entity".
-2) The enumeration name is "EnumType".
-3) There are no traditional methods in this enumeration, but there is one constructor.
-4) The parameters of the constructor are "String tableName" and "String fieldName".
-5) This is not a method in an interface.
-6) There are no invoked methods in this constructor. It is only assigning the parameters to the fields of the enumeration.
-7) The constructor of the enumeration takes two parameters, "tableName" and "fieldName", and assigns them to the corresponding fields of the enumeration.
-
-Here is the JSON string with the above information:
-
-```json
-{
-  "method_name": "EnumType",
-  "package_name": "com.example.demo.entity",
-  "class_name": "EnumType",
-  "parameters": ["String tableName", "String fieldName"],
-  "is_interface": false,
-  "invoked_methods": [],
-  "method_desc": "This is the constructor of the enumeration. It takes two parameters, 'tableName' and 'fieldName', and assigns them to the corresponding fields of the enumeration."
-}
-```
-The provided code is a simple Java class definition using Lombok annotations. It does not contain any explicit methods, but Lombok will generate getter and setter methods for each field. Here is the information extracted:
-
-1) The package name of the class is "com.example.demo.entity".
-2) The class name is "Attribute".
-3) There are 6 methods in total, generated by Lombok: "getDcaId", "setDcaId", "getFieldName", "setFieldName", "getName", "setName".
-4) The parameters of the methods are:
-   - For the getters: no parameters.
-   - For the setters: a single parameter matching the type of the field (Integer for "dcaId", String for "fieldName" and "name").
-5) It is not a method in an interface, it's a class.
-6) There are no invoked methods in this class as there are no explicit method bodies.
-7) As there are no explicit methods, there is no detailed description or formula in the code.
-
-Here is the JSON string:
-
-```json
-[
-  {
-    "method_name": "getDcaId",
-    "package_name": "com.example.demo.entity",
-    "class_name": "Attribute",
-    "parameters": [],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "Getter for 'dcaId' field"
-  },
-  {
-    "method_name": "setDcaId",
-    "package_name": "com.example.demo.entity",
-    "class_name": "Attribute",
-    "parameters": ["Integer"],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "Setter for 'dcaId' field"
-  },
-  {
-    "method_name": "getFieldName",
-    "package_name": "com.example.demo.entity",
-    "class_name": "Attribute",
-    "parameters": [],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "Getter for 'fieldName' field"
-  },
-  {
-    "method_name": "setFieldName",
-    "package_name": "com.example.demo.entity",
-    "class_name": "Attribute",
-    "parameters": ["String"],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "Setter for 'fieldName' field"
-  },
-  {
-    "method_name": "getName",
-    "package_name": "com.example.demo.entity",
-    "class_name": "Attribute",
-    "parameters": [],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "Getter for 'name' field"
-  },
-  {
-    "method_name": "setName",
-    "package_name": "com.example.demo.entity",
-    "class_name": "Attribute",
-    "parameters": ["String"],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "Setter for 'name' field"
-  }
-]
-```
-The provided code is a simple Java class definition using Lombok annotations. It does not contain any methods, so most of the requested information cannot be extracted. However, here is the information that can be extracted:
-
-{
-  "package_name": "com.example.demo.entity",
-  "class_name": "Concept",
-  "method_name": [],
-  "parameters": [],
-  "is_interface": "No",
-  "invoked_methods": [],
-  "method_desc": []
-}
-
-Please note that the Lombok annotations @Getter and @Setter will automatically generate getter and setter methods for the private fields in the class at compile time. However, these methods are not explicitly defined in the provided code.
-The code provided is a Java interface for SQL processing. Here is the extracted information in JSON format:
-
-[
-  {
-    "method_name": "insert",
-    "package_name": "com.example.demo.dao",
-    "class_name": "SQLProcess",
-    "parameters": ["sql"],
-    "is_interface": true,
-    "invoked_methods": [],
-    "method_desc": "This method is used to insert data into a database. The SQL query is passed as a parameter."
-  },
-  {
-    "method_name": "select",
-    "package_name": "com.example.demo.dao",
-    "class_name": "SQLProcess",
-    "parameters": ["sql"],
-    "is_interface": true,
-    "invoked_methods": [],
-    "method_desc": "This method is used to select data from a database. The SQL query is passed as a parameter. It returns a list of maps, where each map represents a row in the result set."
-  },
-  {
-    "method_name": "selectDCByDCTable",
-    "package_name": "com.example.demo.dao",
-    "class_name": "SQLProcess",
-    "parameters": ["table"],
-    "is_interface": true,
-    "invoked_methods": [],
-    "method_desc": "This method is used to select a DC object from a database by its table name. The table name is passed as a parameter."
-  },
-  {
-    "method_name": "selectDCAByDCId",
-    "package_name": "com.example.demo.dao",
-    "class_name": "SQLProcess",
-    "parameters": ["dcId"],
-    "is_interface": true,
-    "invoked_methods": [],
-    "method_desc": "This method is used to select a list of DCA objects from a database by their DC id. The DC id is passed as a parameter."
-  },
-  {
-    "method_name": "selectMapping",
-    "package_name": "com.example.demo.dao",
-    "class_name": "SQLProcess",
-    "parameters": [],
-    "is_interface": true,
-    "invoked_methods": [],
-    "method_desc": "This method is used to select a list of Mapping objects from a database. It does not require any parameters."
-  },
-  {
-    "method_name": "findMaxPin",
-    "package_name": "com.example.demo.dao",
-    "class_name": "SQLProcess",
-    "parameters": [],
-    "is_interface": true,
-    "invoked_methods": [],
-    "method_desc": "This method is used to find the maximum pin value from a database. It does not require any parameters and returns an integer."
-  }
-]
-{
-"method_name": "processVin",
-"package_name": "com.example.demo.controller",
-"class_name": "ProcessController",
-"parameters": "No parameters",
-"is_interface": "No",
-"invoked_methods": [
+  "methods": [
     {
-        "variable_class_name": "Process",
-        "variable_name": "process",
-        "method_name": "link"
+      "method_name": "getProductId",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [],
+      "method_desc": "This method is a getter for the field 'productId'. It returns the value of 'productId', which is of type Integer."
+    },
+    {
+      "method_name": "setProductId",
+      "parameters": [
+        {
+          "parameter_type": "Integer",
+          "parameter_name": "productId"
+        }
+      ],
+      "is_interface": false,
+      "invoked_methods": [],
+      "method_desc": "This method is a setter for the field 'productId'. It takes one parameter of type Integer and assigns it to the 'productId' field of the instance."
     }
-],
-"method_desc": "This method is a GET mapping method in the ProcessController class. It does not take any parameters. It is not a method in an interface. It invokes the 'link' method of the 'process' variable which is of 'Process' class. The method returns a Response object which is the result of the 'link' method of the 'process' variable."
+  ]
 }
-The provided code is a simple Java class definition using Lombok annotations. It does not contain any methods, so most of the requested information cannot be extracted. However, here is the information that can be extracted:
-
-1) The package name of the class is "com.example.demo.model".
-2) The class name is "DCA".
-3) There are no explicitly defined methods in this class. However, due to the Lombok annotations @Getter and @Setter, getter and setter methods will be automatically generated for all the fields in the class.
-4) Since there are no explicitly defined methods, there are no parameters to list.
-5) This is not a method in an interface. It's a simple Java class.
-6) Since there are no methods, there are no invoked methods in the method body.
-7) As there are no methods, there is no method description.
-
-Here is the JSON string with the available information:
-
-```json
 {
-  "package_name": "com.example.demo.model",
-  "class_name": "DCA",
-  "parameters": [],
-  "is_interface": false,
-  "invoked_methods": [],
-  "method_desc": []
+    "method_name": "EnumType",
+    "package_name": "com.example.demo.entity",
+    "class_name": "EnumType",
+    "parameters": [
+        {
+            "parameter_type": "String",
+            "parameter_name": "tableName"
+        },
+        {
+            "parameter_type": "String",
+            "parameter_name": "fieldName"
+        }
+    ],
+    "is_interface": false,
+    "invoked_methods": [],
+    "method_desc": "The 'EnumType' method is a constructor for the enum 'EnumType'. It initializes the enum with two parameters: 'tableName' and 'fieldName'. The 'tableName' parameter is a String that represents the name of the table associated with the enum constant. The 'fieldName' parameter is a String that represents the name of the field associated with the enum constant. There are no methods invoked within the constructor, and it does not follow any specific formula."
 }
-```
-The provided code is a simple Java class with two private fields and no explicit methods. However, it uses Lombok annotations @Getter and @Setter which automatically generate getter and setter methods for the fields. Here is the information extracted from the code:
-
-1) The package name of the class is "com.example.demo.model".
-2) The class name is "Mapping".
-3) There are 4 methods generated by Lombok annotations: getVinDCAId(), setVinDCAId(Integer vinDCAId), getPinDCAId(), setPinDCAId(Integer pinDCAId).
-4) The parameters of the methods are: no parameters for the getter methods, and one Integer parameter for each setter method.
-5) It is not a method in an interface, it's a class.
-6) There are no invoked methods in this class as there are no explicit methods defined.
-7) There are no explicit methods to describe in this class.
-
-Here is the JSON string with the above information:
-
-```json
-[
-  {
-    "method_name": "getVinDCAId",
-    "package_name": "com.example.demo.model",
-    "class_name": "Mapping",
-    "parameters": [],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "This method returns the value of the field vinDCAId."
-  },
-  {
-    "method_name": "setVinDCAId",
-    "package_name": "com.example.demo.model",
-    "class_name": "Mapping",
-    "parameters": ["Integer vinDCAId"],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "This method sets the value of the field vinDCAId."
-  },
-  {
-    "method_name": "getPinDCAId",
-    "package_name": "com.example.demo.model",
-    "class_name": "Mapping",
-    "parameters": [],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "This method returns the value of the field pinDCAId."
-  },
-  {
-    "method_name": "setPinDCAId",
-    "package_name": "com.example.demo.model",
-    "class_name": "Mapping",
-    "parameters": ["Integer pinDCAId"],
-    "is_interface": false,
-    "invoked_methods": [],
-    "method_desc": "This method sets the value of the field pinDCAId."
-  }
-]
-```
-The provided code is a simple Java class with no methods, only fields. Therefore, the information you're asking for cannot be extracted from this code. However, I can provide the information that can be extracted from this code:
-
-1) The package name of the class is "com.example.demo.model".
-2) The class name is "DC".
-3) There are no methods in this class.
-4) There are no parameters of method because there are no methods.
-5) It is not a method in an interface because there are no methods.
-6) There are no invoked methods this method is invoking in the method body because there are no methods.
-7) There is no description of a single method because there are no methods.
-
-Here is the JSON string with the available information:
-
-```json
 {
-  "package_name": "com.example.demo.model",
-  "class_name": "DC",
-  "method_name": null,
-  "parameters": null,
-  "is_interface": null,
-  "invoked_methods": null,
-  "method_desc": null
+    "package_name": "com.example.demo.entity",
+    "class_name": "Attribute",
+    "methods": [
+        {
+            "method_name": "getDcaId",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'dcaId'. It returns the value of 'dcaId', which is an Integer."
+        },
+        {
+            "method_name": "setDcaId",
+            "parameters": [{"parameter_type": "Integer", "parameter_name": "dcaId"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'dcaId'. It takes an Integer parameter 'dcaId' and assigns it to the field 'dcaId' of the object."
+        },
+        {
+            "method_name": "getFieldName",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'fieldName'. It returns the value of 'fieldName', which is a String."
+        },
+        {
+            "method_name": "setFieldName",
+            "parameters": [{"parameter_type": "String", "parameter_name": "fieldName"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'fieldName'. It takes a String parameter 'fieldName' and assigns it to the field 'fieldName' of the object."
+        },
+        {
+            "method_name": "getName",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'name'. It returns the value of 'name', which is a String."
+        },
+        {
+            "method_name": "setName",
+            "parameters": [{"parameter_type": "String", "parameter_name": "name"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'name'. It takes a String parameter 'name' and assigns it to the field 'name' of the object."
+        }
+    ]
 }
-```
-
-Please note that the "Getter" and "Setter" annotations from the Lombok library will automatically generate getter and setter methods for the fields in the class at compile time. However, these methods are not explicitly defined in the provided code.
 {
-"method_name": "getSt",
-"package_name": "com.example.demo.service",
-"class_name": "VendorWrite",
-"parameters": [
+    "package_name": "com.example.demo.entity",
+    "class_name": "Concept",
+    "methods": []
+}
+
+{
+  "methods": [
     {
-        "type": "Concept",
-        "name": "concept"
+      "method_name": "insert",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "sql",
+          "type": "String"
+        }
+      ],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method is designed to execute an insert operation in the database. The SQL statement to be executed is passed as a parameter. Since this is an interface, the actual implementation is not shown here, and there are no invoked methods within this method."
     },
     {
-        "type": "Integer",
-        "name": "vin"
+      "method_name": "select",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "sql",
+          "type": "String"
+        }
+      ],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method is intended to execute a select query in the database. The SQL query string is passed as a parameter. It returns a list of maps, where each map represents a row with column names as keys and corresponding data as values. As this is an interface, the method body is not provided, hence no invoked methods."
+    },
+    {
+      "method_name": "selectDCByDCTable",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "table",
+          "type": "String"
+        }
+      ],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method retrieves a DC object from the database based on the specified table name. The table name is passed as a parameter. The method returns a single DC object. As an interface method, the implementation details and invoked methods are not present."
+    },
+    {
+      "method_name": "selectDCAByDCId",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "dcId",
+          "type": "Integer"
+        }
+      ],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method fetches a list of DCA objects from the database that are associated with a given DC id. The DC id is provided as a parameter. It returns a list of DCA objects. There are no invoked methods as this is an interface definition."
+    },
+    {
+      "method_name": "selectMapping",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method is used to retrieve a list of Mapping objects from the database. It does not take any parameters. The method returns a list of Mapping objects. Since this is an interface, there is no method body or invoked methods."
+    },
+    {
+      "method_name": "findMaxPin",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method finds the maximum 'pin' value from a set of records in the database. It does not require any parameters and returns an Integer representing the highest 'pin' value found. As an interface, the method does not contain an implementation or any invoked methods."
     }
-],
-"is_interface": false,
-"invoked_methods": [
-    {
-        "variable_class_name": "Concept",
-        "variable_name": "concept",
-        "method_name": "getEnumType"
-    },
-    {
-        "variable_class_name": "EnumType",
-        "variable_name": "enumType",
-        "method_name": "getTableName"
-    },
-    {
-        "variable_class_name": "SQLProcess",
-        "variable_name": "sqlProcess",
-        "method_name": "select"
-    },
-    {
-        "variable_class_name": "Concept",
-        "variable_name": "concept",
-        "method_name": "getColumns"
-    },
-    {
-        "variable_class_name": "Map",
-        "variable_name": "result",
-        "method_name": "get"
-    },
-    {
-        "variable_class_name": "Identifier",
-        "variable_name": "identifier",
-        "method_name": "setAttributeValue"
-    }
-],
-"method_desc": "This method is named 'getSt' and it takes two parameters: a 'Concept' object and an 'Integer' object. It creates a new 'Identifier' object and a new 'HashMap' object. It then constructs a SQL query string using the 'getTableName' method of the 'EnumType' object returned by the 'getEnumType' method of the 'Concept' object and the 'Integer' object. The SQL query is executed using the 'select' method of the 'SQLProcess' object and the result is stored in a 'Map' object. The 'getColumns' method of the 'Concept' object is used to iterate over the columns and for each column, the corresponding value is retrieved from the 'Map' object using the 'get' method and added to the 'HashMap' object. Finally, the 'HashMap' object is set as the attribute value of the 'Identifier' object using the 'setAttributeValue' method and the 'Identifier' object is returned."
+  ]
 }
-Here is the JSON string with the required information:
-
-```json
 {
-  "method_name": "link",
-  "package_name": "com.example.demo.service",
-  "class_name": "Process",
+  "method_name": "processVin",
+  "package_name": "com.example.demo.controller",
+  "class_name": "ProcessController",
   "parameters": [],
   "is_interface": false,
   "invoked_methods": [
     {
-      "variable_class_name": "SQLProcess",
-      "variable_name": "sqlProcess",
-      "method_name": "findMaxPin"
-    },
-    {
-      "variable_class_name": "InitService",
-      "variable_name": "initService",
-      "method_name": "getConceptSchema"
-    },
-    {
-      "variable_class_name": "VendorWrite",
-      "variable_name": "vendorWrite",
-      "method_name": "getSt"
-    },
-    {
-      "variable_class_name": "InitService",
-      "variable_name": "initService",
-      "method_name": "getMappings"
-    },
-    {
-      "variable_class_name": "ProductWrite",
-      "variable_name": "productWrite",
-      "method_name": "getInsertStr"
-    },
-    {
-      "variable_class_name": "SQLProcess",
-      "variable_name": "sqlProcess",
-      "method_name": "insert"
+      "variable_class_name": "Process",
+      "variable_name": "process",
+      "method_name": "link"
     }
   ],
-  "method_desc": "The 'link' method first finds the maximum 'pin' from the 'SQLProcess' class and increments it by one. It then gets the 'Concept' objects for 'VENDOR' and 'PRODUCT' from the 'InitService' class. It creates maps of 'Attribute' objects for both 'VENDOR' and 'PRODUCT'. It then gets the 'Identifier' for the 'VENDOR' from the 'VendorWrite' class. It gets the list of 'Mapping' objects from the 'InitService' class. It then creates a new map of 'Attribute' and 'String' for 'PRODUCT' by iterating over the 'Mapping' list. It creates a new 'Identifier' for the 'PRODUCT' and sets the 'Concept' and 'AttributeValue'. It gets the 'insert' string from the 'ProductWrite' class and replaces the first '?' with the 'pin'. It then replaces the remaining '?' with the 'AttributeValue' for each 'Attribute' in the 'PRODUCT' 'Concept'. It then inserts the 'insert' string into the 'SQLProcess' class. Finally, it returns a new 'Response' with the 'pin'."
+  "method_desc": "The method 'processVin' is a public method with no parameters, mapped to the root URL path '/' via the @GetMapping annotation. It is not part of an interface. When a GET request is made to the root URL, this method is invoked. Inside the method body, it calls the 'link' method on the 'process' object, which is an instance of the 'Process' class. The 'process' object is injected by Spring's dependency injection mechanism due to the @Autowired annotation. The 'link' method is expected to return a 'Response' object, which is then returned by the 'processVin' method to the client making the GET request. There is no formula present in the code."
 }
-```
-The task is asking to create a JSON string that contains information about the methods in a given Java class. The information includes the package name, class name, method names, parameters of the methods, whether the method is in an interface, the methods that are invoked within the method, and a detailed description of each method.
-
-Here is an example of how the JSON string might look like for the `init` method in the `InitService` class:
-
-```json
 {
-  "method_name": "init",
-  "package_name": "com.example.demo.service",
-  "class_name": "InitService",
-  "parameters": [],
-  "is_interface": false,
-  "invoked_methods": [
-    {
-      "variable_class_name": "SQLProcess",
-      "variable_name": "sqlProcess",
-      "method_name": "selectMapping"
-    },
-    {
-      "variable_class_name": "InitService",
-      "variable_name": "this",
-      "method_name": "loadSchema"
-    }
-  ],
-  "method_desc": "This method is annotated with @PostConstruct, which means it is executed after dependency injection is done. It initializes the 'mappings' field by selecting the mapping from the SQLProcess. Then it loads the schema for the VENDOR and PRODUCT enum types."
+    "package_name": "com.example.demo.model",
+    "class_name": "DCA",
+    "methods": [
+        {
+            "method_name": "getDcaId",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'dcaId'. It returns the value of 'dcaId', which is an Integer."
+        },
+        {
+            "method_name": "setDcaId",
+            "parameters": [{"parameter_type": "Integer", "parameter_name": "dcaId"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'dcaId'. It takes an Integer parameter 'dcaId' and assigns it to the field 'dcaId' of the object."
+        },
+        {
+            "method_name": "getDcId",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'dcId'. It returns the value of 'dcId', which is an Integer."
+        },
+        {
+            "method_name": "setDcId",
+            "parameters": [{"parameter_type": "Integer", "parameter_name": "dcId"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'dcId'. It takes an Integer parameter 'dcId' and assigns it to the field 'dcId' of the object."
+        },
+        {
+            "method_name": "getField",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'field'. It returns the value of 'field', which is a String."
+        },
+        {
+            "method_name": "setField",
+            "parameters": [{"parameter_type": "String", "parameter_name": "field"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'field'. It takes a String parameter 'field' and assigns it to the field 'field' of the object."
+        },
+        {
+            "method_name": "getName",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'name'. It returns the value of 'name', which is a String."
+        },
+        {
+            "method_name": "setName",
+            "parameters": [{"parameter_type": "String", "parameter_name": "name"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'name'. It takes a String parameter 'name' and assigns it to the field 'name' of the object."
+        }
+    ]
 }
-```
-
-This JSON string can be created by analyzing the Java code and extracting the required information. Note that this task requires knowledge of Java and understanding of the code.
-Here is the JSON string with the requested information:
-
-```json
 {
-  "method_name": "insertSt",
+    "method_name": [],
+    "package_name": "com.example.demo.model",
+    "class_name": "Mapping",
+    "parameters": [],
+    "is_interface": false,
+    "invoked_methods": [],
+    "method_desc": []
+}
+{
+    "package_name": "com.example.demo.model",
+    "class_name": "DC",
+    "methods": [
+        {
+            "method_name": "getDcId",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'dcId'. It returns the value of 'dcId', which is an Integer."
+        },
+        {
+            "method_name": "setDcId",
+            "parameters": [{"parameter_type": "Integer", "parameter_name": "dcId"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'dcId'. It takes an Integer parameter 'dcId' and sets the field 'this.dcId' to the provided value."
+        },
+        {
+            "method_name": "getTable",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'table'. It returns the value of 'table', which is a String."
+        },
+        {
+            "method_name": "setTable",
+            "parameters": [{"parameter_type": "String", "parameter_name": "table"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'table'. It takes a String parameter 'table' and sets the field 'this.table' to the provided value."
+        },
+        {
+            "method_name": "getName",
+            "parameters": [],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a getter for the field 'name'. It returns the value of 'name', which is a String."
+        },
+        {
+            "method_name": "setName",
+            "parameters": [{"parameter_type": "String", "parameter_name": "name"}],
+            "is_interface": false,
+            "invoked_methods": [],
+            "method_desc": "This method is a setter for the field 'name'. It takes a String parameter 'name' and sets the field 'this.name' to the provided value."
+        }
+    ]
+}
+{
+  "method_name": "getSt",
   "package_name": "com.example.demo.service",
-  "class_name": "ProductWrite",
+  "class_name": "VendorWrite",
   "parameters": [
     {
-      "type": "Concept",
-      "name": "concept"
+      "parameter_type": "Concept",
+      "parameter_name": "concept"
+    },
+    {
+      "parameter_type": "Integer",
+      "parameter_name": "vin"
     }
   ],
   "is_interface": false,
   "invoked_methods": [
     {
-      "variable_class_name": "StringBuilder",
-      "variable_name": "stringBuilder",
-      "method_name": "append"
+      "variable_class_name": "SQLProcess",
+      "variable_name": "sqlProcess",
+      "method_name": "select"
     },
     {
-      "variable_class_name": "Concept",
-      "variable_name": "concept",
-      "method_name": "getEnumType"
-    },
-    {
-      "variable_class_name": "EnumType",
-      "variable_name": "enumType",
-      "method_name": "getTableName"
-    },
-    {
-      "variable_class_name": "EnumType",
-      "variable_name": "enumType",
-      "method_name": "getFieldName"
-    },
-    {
-      "variable_class_name": "Concept",
-      "variable_name": "concept",
-      "method_name": "getColumns"
-    },
-    {
-      "variable_class_name": "Attribute",
-      "variable_name": "column",
-      "method_name": "getFieldName"
+      "variable_class_name": "List<Attribute>",
+      "variable_name": "concept.getColumns()",
+      "method_name": "forEach"
     }
   ],
-  "method_desc": "The method 'insertSt' is used to create an SQL insert statement. It takes a 'Concept' object as a parameter. It starts by appending 'insert into ' to the StringBuilder, followed by the table name and field name from the 'Concept' object's 'EnumType'. It then iterates over the 'Concept' object's columns, appending each column's field name to the StringBuilder. After that, it appends 'values (?)' to the StringBuilder, followed by a comma-separated list of '?' placeholders for each attribute. The number of placeholders is equal to the number of columns in the 'Concept' object. Finally, it assigns the resulting string to the 'insertStr' variable."
+  "method_desc": "The method 'getSt' takes a 'Concept' object and an 'Integer' vin as parameters. It creates a new 'Identifier' object and a 'HashMap' to map 'Attribute' to 'String'. It constructs a SQL query to select all columns from a table named after the 'enumType' of the 'concept' where the 'vin' matches the provided value. The method then calls 'select' on an 'SQLProcess' object, passing the SQL query, and retrieves the first result from the returned list. For each 'Attribute' in the 'concept's columns, it puts an entry into the map with the 'Attribute' as the key and the corresponding value from the result set (converted to a 'String') as the value. Finally, it sets this map as the attribute values of the 'Identifier' object and returns it."
 }
-```
+{
+    "method_name": "link",
+    "package_name": "com.example.demo.service",
+    "class_name": "Process",
+    "parameters": [],
+    "is_interface": false,
+    "invoked_methods": [
+        {"variable_class_name": "SQLProcess", "variable_name": "sqlProcess", "method_name": "findMaxPin"},
+        {"variable_class_name": "InitService", "variable_name": "initService", "method_name": "getConceptSchema"},
+        {"variable_class_name": "VendorWrite", "variable_name": "vendorWrite", "method_name": "getSt"},
+        {"variable_class_name": "InitService", "variable_name": "initService", "method_name": "getMappings"},
+        {"variable_class_name": "ProductWrite", "variable_name": "productWrite", "method_name": "getInsertStr"},
+        {"variable_class_name": "SQLProcess", "variable_name": "sqlProcess", "method_name": "insert"}
+    ],
+    "method_desc": "The 'link' method is responsible for creating a link between vendor and product data. It starts by finding the maximum 'pin' value in the database and increments it by 1 to ensure a unique 'pin' for the new product. It then retrieves the vendor and product concept schemas and maps their attributes to their respective DCA IDs. The method fetches the vendor identifier for a static 'vin' value and maps the vendor attributes to the product attributes based on predefined mappings. It constructs a new product identifier with these mapped values. The method then prepares an SQL insert statement by replacing placeholders with the 'pin' value and the mapped attribute values. Finally, it executes the insert statement to add the new product link to the database. The method returns a response object containing the new 'pin' value."
+}
+
+{
+    "method_name": "init",
+    "package_name": "com.example.demo.service",
+    "class_name": "InitService",
+    "parameters": [],
+    "is_interface": false,
+    "invoked_methods": [
+        {"variable_class_name": "SQLProcess", "variable_name": "sqlProcess", "method_name": "selectMapping"},
+        {"variable_class_name": "InitService", "variable_name": "this", "method_name": "loadSchema"},
+        {"variable_class_name": "InitService", "variable_name": "this", "method_name": "loadSchema"}
+    ],
+    "method_desc": "The 'init' method is annotated with '@PostConstruct', indicating it will be executed after the bean's properties have been set by the Spring container. It initializes the 'mappings' field by calling 'selectMapping' on the 'sqlProcess' object. It then calls the 'loadSchema' method twice with different 'EnumType' parameters to load the schema for VENDOR and PRODUCT."
+}
+  
+ 
+{
+    "method_name": "insertSt",
+    "package_name": "com.example.demo.service",
+    "class_name": "ProductWrite",
+    "parameters": [
+        {
+            "parameter_type": "Concept",
+            "parameter_name": "concept"
+        }
+    ],
+    "is_interface": false,
+    "invoked_methods": [
+        {
+            "variable_class_name": "Concept",
+            "variable_name": "concept",
+            "method_name": "getEnumType"
+        },
+        {
+            "variable_class_name": "EnumType",
+            "variable_name": "concept.getEnumType()",
+            "method_name": "getTableName"
+        },
+        {
+            "variable_class_name": "EnumType",
+            "variable_name": "concept.getEnumType()",
+            "method_name": "getFieldName"
+        },
+        {
+            "variable_class_name": "Concept",
+            "variable_name": "concept",
+            "method_name": "getColumns"
+        },
+        {
+            "variable_class_name": "Attribute",
+            "variable_name": "column",
+            "method_name": "getFieldName"
+        }
+    ],
+    "method_desc": "The method 'insertSt' is responsible for constructing an SQL insert statement for a given 'Concept' object. It starts by creating a new StringBuilder and appending the 'insert into' clause followed by the table name, which is retrieved from the 'EnumType' associated with the 'Concept' object. It then appends the field names for the insert statement, starting with the primary field from 'EnumType' and then iterating over each 'Attribute' in the 'Concept' object's 'columns' list to append additional field names. After the field names, the method appends the 'values' clause with placeholders '?' for each field value. The number of placeholders corresponds to the number of fields (1 for the primary field plus the number of attributes). Finally, the constructed SQL statement is converted to a string and assigned to the 'insertStr' member variable of the 'ProductWrite' class."
+}

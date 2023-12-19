@@ -1,0 +1,26 @@
+"""
+
+Please read the code: 
+'''{sourceCode}''' 
+
+extract the below information:
+1) what is the package name of the class
+2) what is the class name
+3) how many methods and methods name
+4) what are the parameters of method
+5) is it a method in an interface
+6) what are the invoked methods this method is invoking in the method body, list 'variable class name', 'variable name' and 'method name' for each invoked method
+7) description of single method, describe as detailed as possible, note the formula in the description if have in the code
+
+Constuct the json string with the above information to below attributes, data seperate by each method:
+"method_name"
+"package_name"
+"class_name"
+"parameters"
+"is_interface"
+"invoked_methods"
+"method_desc"
+
+Output should be the json format string only, no other additional description or explanation.
+
+"""

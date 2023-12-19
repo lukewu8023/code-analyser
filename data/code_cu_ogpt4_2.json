@@ -1,0 +1,397 @@
+The output JSON string based on the provided code would be:
+
+```json
+{
+  "method_name": "contextLoads",
+  "package_name": "com.example.demo",
+  "class_name": "DemoApplicationTests",
+  "parameters": [],
+  "is_interface": false,
+  "invoked_methods": [],
+  "method_desc": "This is a test method named 'contextLoads' in the class 'DemoApplicationTests'. It does not take any parameters and does not return any value. The method body is currently empty, meaning it does not perform any operations or invoke any other methods."
+}
+```
+{"method_name": "main", "package_name": "com.example.demo", "class_name": "DemoApplication", "parameters": ["args"], "is_interface": "No", "invoked_methods": [{"variable_class_name": "SpringApplication", "variable_name": "run", "method_name": "DemoApplication.class, args"}], "method_desc": "This is the main method which is the entry point for any Java application. The main method is executing the run method of SpringApplication class with DemoApplication.class and args as parameters. The run method will start the whole Spring application."}
+The provided code does not contain any methods, it's a simple class with two fields. Therefore, it's not possible to provide information about methods, parameters, invoked methods, or method descriptions. However, the package name and class name can be extracted.
+
+Here is the JSON string for the available information:
+
+```json
+{
+  "package_name": "com.example.demo.entity",
+  "class_name": "Identifier"
+}
+```
+The provided code does not contain any methods, it's a simple class with a single attribute. Therefore, the information about methods, parameters, interface, invoked methods, and method description cannot be extracted. However, the package name and class name can be extracted. Here is the JSON string for the available information:
+
+```json
+{
+  "package_name": "com.example.demo.entity",
+  "class_name": "Response"
+}
+```
+The given code is an enumeration in Java, not a class. It does not contain any methods, but it does contain a constructor. Here is the information extracted from the code:
+
+1) The package name of the class is "com.example.demo.entity".
+2) The class name is "EnumType".
+3) There are no methods in this enumeration. There is only a constructor.
+4) The parameters of the constructor are "String tableName" and "String fieldName".
+5) No, it is not a method in an interface. It is a constructor in an enumeration.
+6) The constructor is not invoking any methods. It is only assigning values to the instance variables "tableName" and "fieldName".
+7) The constructor "EnumType(String tableName, String fieldName)" is used to create an instance of the enumeration. It takes two parameters: a string for the table name and a string for the field name. These values are then assigned to the instance variables "tableName" and "fieldName".
+
+Here is the JSON string:
+
+```json
+{
+  "method_name": "",
+  "package_name": "com.example.demo.entity",
+  "class_name": "EnumType",
+  "parameters": ["String tableName", "String fieldName"],
+  "is_interface": false,
+  "invoked_methods": [],
+  "method_desc": "The constructor 'EnumType(String tableName, String fieldName)' is used to create an instance of the enumeration. It takes two parameters: a string for the table name and a string for the field name. These values are then assigned to the instance variables 'tableName' and 'fieldName'."
+}
+```
+The provided code does not contain any methods, it's a simple Java class with three private fields and using Lombok annotations to generate getter, setter and constructor methods. Therefore, the information requested such as method names, parameters, whether it's an interface, invoked methods, and method descriptions cannot be extracted from this code. 
+
+However, based on the available information, a partial JSON can be constructed as follows:
+
+```json
+{
+  "package_name": "com.example.demo.entity",
+  "class_name": "Attribute",
+  "is_interface": false
+}
+```
+
+Please provide a Java class with methods to extract the requested information.
+The provided code is a simple Java class definition using Lombok annotations. It does not contain any methods, so most of the requested information cannot be extracted. However, the package name and class name can be identified.
+
+Here is the JSON string for the available information:
+
+```json
+{
+  "package_name": "com.example.demo.entity",
+  "class_name": "Concept"
+}
+```
+
+Please note that Lombok's @Getter and @Setter annotations automatically generate getter and setter methods for the class fields during compile time. However, these methods are not explicitly defined in the provided code, so they are not included in the JSON string.
+[{
+"method_name": "insert",
+"package_name": "com.example.demo.dao",
+"class_name": "SQLProcess",
+"parameters": ["sql"],
+"is_interface": true,
+"invoked_methods": [],
+"method_desc": "This method is used to insert data into a database. It takes a SQL query string as a parameter."
+},
+{
+"method_name": "select",
+"package_name": "com.example.demo.dao",
+"class_name": "SQLProcess",
+"parameters": ["sql"],
+"is_interface": true,
+"invoked_methods": [],
+"method_desc": "This method is used to select data from a database. It takes a SQL query string as a parameter and returns a list of maps where each map represents a row in the result set."
+},
+{
+"method_name": "selectDCByDCTable",
+"package_name": "com.example.demo.dao",
+"class_name": "SQLProcess",
+"parameters": ["table"],
+"is_interface": true,
+"invoked_methods": [],
+"method_desc": "This method is used to select a DC object from a database by its table name. It takes a table name string as a parameter."
+},
+{
+"method_name": "selectDCAByDCId",
+"package_name": "com.example.demo.dao",
+"class_name": "SQLProcess",
+"parameters": ["dcId"],
+"is_interface": true,
+"invoked_methods": [],
+"method_desc": "This method is used to select a list of DCA objects from a database by their DC id. It takes a DC id integer as a parameter."
+},
+{
+"method_name": "selectMapping",
+"package_name": "com.example.demo.dao",
+"class_name": "SQLProcess",
+"parameters": [],
+"is_interface": true,
+"invoked_methods": [],
+"method_desc": "This method is used to select a list of Mapping objects from a database. It does not take any parameters."
+},
+{
+"method_name": "findMaxPin",
+"package_name": "com.example.demo.dao",
+"class_name": "SQLProcess",
+"parameters": [],
+"is_interface": true,
+"invoked_methods": [],
+"method_desc": "This method is used to find the maximum pin number in a database. It does not take any parameters and returns an integer."
+}]
+The output JSON string based on the provided Java code would be:
+
+```json
+{
+  "method_name": "processVin",
+  "package_name": "com.example.demo.controller",
+  "class_name": "ProcessController",
+  "parameters": [],
+  "is_interface": false,
+  "invoked_methods": [
+    {
+      "variable_class_name": "Process",
+      "variable_name": "process",
+      "method_name": "link"
+    }
+  ],
+  "method_desc": "This method is a GET mapping method in the ProcessController class. It does not take any parameters. It invokes the 'link' method of the 'process' object of the 'Process' class. The method returns a Response object which is the result of the 'link' method of the 'process' object."
+}
+```
+
+Explanation:
+1) The package name of the class is "com.example.demo.controller".
+2) The class name is "ProcessController".
+3) There is one method in the class, named "processVin".
+4) The method "processVin" does not have any parameters.
+5) This is not a method in an interface.
+6) The method "processVin" is invoking the "link" method of the "process" object of the "Process" class.
+7) The method "processVin" is a GET mapping method in the ProcessController class. It does not take any parameters. It invokes the 'link' method of the 'process' object of the 'Process' class. The method returns a Response object which is the result of the 'link' method of the 'process' object.
+The provided code is a simple Java class with no methods, only fields. Therefore, the information you're asking for cannot be extracted from this code. However, I can provide the information that can be extracted from this code:
+
+1) The package name of the class is "com.example.demo.model".
+2) The class name is "DCA".
+3) There are no methods in this class.
+4) There are no parameters of method because there are no methods.
+5) It is not a method in an interface because there are no methods.
+6) There are no invoked methods this method is invoking in the method body because there are no methods.
+7) There is no description of single method because there are no methods.
+
+The JSON string with the above information would look like this:
+
+```json
+{
+  "package_name": "com.example.demo.model",
+  "class_name": "DCA",
+  "methods": []
+}
+```
+
+In this JSON, "methods" is an empty array because there are no methods in the class. If there were methods, each method would be represented as an object in this array.
+The provided code does not contain any methods, it only contains two private variables. Therefore, it's not possible to provide information about methods, parameters, invoked methods, or method descriptions. However, the package name and class name can be extracted.
+
+Here is the JSON string for the available information:
+
+```json
+{
+  "package_name": "com.example.demo.model",
+  "class_name": "Mapping"
+}
+```
+The provided code does not contain any methods, it is a simple Java class with three private fields and getter and setter methods for these fields provided by the Lombok library. Therefore, the information requested in points 3 to 7 cannot be extracted from this code. 
+
+However, the information for points 1 and 2 can be extracted and represented in JSON format as follows:
+
+```json
+{
+  "package_name": "com.example.demo.model",
+  "class_name": "DC"
+}
+```
+Here is the JSON string based on the provided Java code:
+
+```json
+{
+  "method_name": "getSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "VendorWrite",
+  "parameters": [
+    {
+      "type": "Concept",
+      "name": "concept"
+    },
+    {
+      "type": "Integer",
+      "name": "vin"
+    }
+  ],
+  "is_interface": false,
+  "invoked_methods": [
+    {
+      "variable_class_name": "Concept",
+      "variable_name": "concept",
+      "method_name": "getEnumType"
+    },
+    {
+      "variable_class_name": "EnumType",
+      "method_name": "getTableName"
+    },
+    {
+      "variable_class_name": "SQLProcess",
+      "variable_name": "sqlProcess",
+      "method_name": "select"
+    },
+    {
+      "variable_class_name": "Concept",
+      "variable_name": "concept",
+      "method_name": "getColumns"
+    },
+    {
+      "variable_class_name": "Map",
+      "variable_name": "result",
+      "method_name": "get"
+    },
+    {
+      "variable_class_name": "Identifier",
+      "variable_name": "identifier",
+      "method_name": "setAttributeValue"
+    }
+  ],
+  "method_desc": "This method 'getSt' takes a Concept object and an Integer 'vin' as parameters. It creates a new Identifier object and a HashMap. It then constructs a SQL query string using the table name from the EnumType of the Concept object and the provided 'vin'. The SQL query is executed using the 'select' method of the 'sqlProcess' object and the result is stored in a Map. The method then iterates over the columns of the Concept object, retrieves the corresponding value from the result Map using the field name of each column, and stores it in the previously created HashMap. Finally, the HashMap is set as the attribute value of the Identifier object, which is then returned."
+}
+```
+The JSON string for the information extracted from the code is:
+
+```json
+{
+  "method_name": "link",
+  "package_name": "com.example.demo.service",
+  "class_name": "Process",
+  "parameters": [],
+  "is_interface": false,
+  "invoked_methods": [
+    {
+      "variable_class_name": "SQLProcess",
+      "variable_name": "sqlProcess",
+      "method_name": "findMaxPin"
+    },
+    {
+      "variable_class_name": "InitService",
+      "variable_name": "initService",
+      "method_name": "getConceptSchema"
+    },
+    {
+      "variable_class_name": "VendorWrite",
+      "variable_name": "vendorWrite",
+      "method_name": "getSt"
+    },
+    {
+      "variable_class_name": "InitService",
+      "variable_name": "initService",
+      "method_name": "getMappings"
+    },
+    {
+      "variable_class_name": "ProductWrite",
+      "variable_name": "productWrite",
+      "method_name": "getInsertStr"
+    },
+    {
+      "variable_class_name": "SQLProcess",
+      "variable_name": "sqlProcess",
+      "method_name": "insert"
+    }
+  ],
+  "method_desc": "This method is named 'link' and it does not take any parameters. It first retrieves the maximum pin from the SQLProcess and increments it by one. Then it retrieves the concept schemas for VENDOR and PRODUCT from the InitService. It also retrieves the vendor identifier from the VendorWrite. It then iterates over the mappings from the InitService and for each mapping, it retrieves the corresponding attributes from the VENDOR and PRODUCT concept schemas and stores them in a map. It then creates a new Identifier for the PRODUCT and sets its concept and attribute values. It then retrieves the insert string from the ProductWrite and replaces the placeholders in the string with the pin and the attribute values from the PRODUCT Identifier. Finally, it inserts the string into the SQLProcess and returns a new Response with the pin."
+}
+```
+"""
+[
+    {
+        "method_name": "init",
+        "package_name": "com.example.demo.service",
+        "class_name": "InitService",
+        "parameters": [],
+        "is_interface": false,
+        "invoked_methods": [
+            {
+                "variable_class_name": "SQLProcess",
+                "variable_name": "sqlProcess",
+                "method_name": "selectMapping"
+            },
+            {
+                "variable_class_name": "InitService",
+                "variable_name": "this",
+                "method_name": "loadSchema"
+            }
+        ],
+        "method_desc": "This method is annotated with @PostConstruct, which means it will be executed after dependency injection is done to perform any initialization. It first calls the selectMapping method of the SQLProcess class to get a list of mappings and assigns it to the mappings variable. Then it calls the loadSchema method twice with different parameters."
+    },
+    {
+        "method_name": "loadSchema",
+        "package_name": "com.example.demo.service",
+        "class_name": "InitService",
+        "parameters": ["EnumType enumType"],
+        "is_interface": false,
+        "invoked_methods": [
+            {
+                "variable_class_name": "SQLProcess",
+                "variable_name": "sqlProcess",
+                "method_name": "selectDCByDCTable"
+            },
+            {
+                "variable_class_name": "SQLProcess",
+                "variable_name": "sqlProcess",
+                "method_name": "selectDCAByDCId"
+            },
+            {
+                "variable_class_name": "ProductWrite",
+                "variable_name": "productWrite",
+                "method_name": "insertSt"
+            }
+        ],
+        "method_desc": "This method takes an EnumType as a parameter and uses it to load a schema. It first creates a new Concept object and sets its EnumType. Then it calls the selectDCByDCTable method of the SQLProcess class to get a DC object and assigns its name to the Concept object. It also calls the selectDCAByDCId method of the SQLProcess class to get a list of DCA objects, which it then transforms into a list of Attribute objects and assigns to the Concept object. Finally, it puts the Concept object into the conceptSchema map and if the EnumType is PRODUCT, it calls the insertSt method of the ProductWrite class."
+    }
+]
+"""
+The output JSON string for the given Java code would be:
+
+```json
+{
+  "method_name": "insertSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "ProductWrite",
+  "parameters": [
+    {
+      "type": "Concept",
+      "name": "concept"
+    }
+  ],
+  "is_interface": false,
+  "invoked_methods": [
+    {
+      "variable_class_name": "StringBuilder",
+      "variable_name": "stringBuilder",
+      "method_name": "append"
+    },
+    {
+      "variable_class_name": "Concept",
+      "variable_name": "concept",
+      "method_name": "getEnumType"
+    },
+    {
+      "variable_class_name": "EnumType",
+      "variable_name": "enumType",
+      "method_name": "getTableName"
+    },
+    {
+      "variable_class_name": "EnumType",
+      "variable_name": "enumType",
+      "method_name": "getFieldName"
+    },
+    {
+      "variable_class_name": "Concept",
+      "variable_name": "concept",
+      "method_name": "getColumns"
+    },
+    {
+      "variable_class_name": "Attribute",
+      "variable_name": "column",
+      "method_name": "getFieldName"
+    }
+  ],
+  "method_desc": "This method is used to construct an SQL insert statement. It takes a Concept object as a parameter. It starts by appending the table name and field name from the EnumType of the Concept object to the StringBuilder. Then, it iterates over the columns of the Concept object, appending each column's field name to the StringBuilder. After that, it appends the values placeholder for the SQL statement. Finally, it sets the insertStr field of the ProductWrite object to the constructed SQL statement."
+}
+```
