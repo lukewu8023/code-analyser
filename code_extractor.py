@@ -23,6 +23,12 @@ print(f"+++Number of loaded documents: {len(documents)}")
 # for text in texts:
 #     print(f"+++Trunk text content: {text}")
 
+chat = ChatOpenAI(
+    model="gpt-3.5-turbo-0613",
+    temperature=0,
+    max_tokens=1024,
+)
+
 # chat = ChatOpenAI(
 #     model="gpt-4-1106-preview",
 #     temperature=0,
@@ -30,13 +36,14 @@ print(f"+++Number of loaded documents: {len(documents)}")
 #     response_format={"type": "json_object"},
 # )
 
-chat = ChatOpenAI(
-    model="gpt-4",
-    temperature=0,
-    max_tokens=1024,
-)
+# chat = ChatOpenAI(
+#     model="gpt-4",
+#     temperature=0,
+#     max_tokens=1024,
+# )
 
-with open("prompt/prompt_extraction.txt") as f:
+
+with open("prompt/prompt_extract.txt") as f:
     contents = f.read()
 template_string = contents
 prompt_template = ChatPromptTemplate.from_template(template_string)
