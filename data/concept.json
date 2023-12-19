@@ -1,0 +1,18 @@
+{
+  "concepts": [
+    {
+      "concept_name": "dc",
+      "concept_table_name": "vendor.dc",
+      "attributes": [
+        {
+          "attribute_name": "vendor_dca1",
+          "attribute_field_name": "dca1"
+        },
+        {
+          "attribute_name": "vendor_dca2",
+          "attribute_field_name": "dca2"
+        }
+      ]
+    }
+  ]
+}
