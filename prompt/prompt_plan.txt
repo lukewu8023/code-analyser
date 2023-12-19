@@ -1,0 +1,15 @@
+Plan:
+1. Get the data model from meta schema
+2. Get the concept name that contains the attribute provided by user
+3. Check which method run the sql that insert attribute value into the data table
+4. Repeat to get all the methods in invoke chain of this method
+5. Check which method in the chain changes the value of this attribute
+6. Provide the logic of the change
+
+Plan return format:
+```
+Plan:
+1. xxx
+2. xxx
+...
+```
