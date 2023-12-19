@@ -8,7 +8,7 @@ from langchain.embeddings import OpenAIEmbeddings
 embeddings_model = OpenAIEmbeddings()
 
 embedded_query = embeddings_model.embed_query(
-    "What is the method which calculates using uniform rate?"
+    "What is the change logic of the attribute 'maturity date'?"
 )
 
 client = weaviate.Client(os.environ.get("WEAVIATE_URL"))
