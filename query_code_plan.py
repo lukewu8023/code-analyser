@@ -20,7 +20,7 @@ model = ChatOpenAI(
     model="gpt-3.5-turbo-0613",
     # model="gpt-4-0613",
     temperature=0,
-    max_tokens=1024,
+    max_tokens=2048,
 )
 system_prompt = contents
 
@@ -35,7 +35,7 @@ tools = [
     Tool.from_function(
         func=get_tools.get_data_info,
         name="Get data information",
-        description="get data information",
+        description="get data information as per the user query, input is one string of user query",
     ),
 ]
 
