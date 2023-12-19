@@ -1,0 +1,481 @@
+{
+  "method_name": "getSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "VendorWrite",
+  "parameters": [
+    {
+      "name": "concept",
+      "type": "Concept"
+    },
+    {
+      "name": "vin",
+      "type": "Integer"
+    }
+  ],
+  "is_interface": false,
+  "invoked_method": [
+    "select"
+  ],
+  "method_desc": "This method retrieves an Identifier object based on the given Concept and vin. It queries the database using the SQLProcess class to retrieve the data for the given vin. The retrieved data is then mapped to the Attribute objects of the Concept and stored in a map. Finally, the map is set as the attribute value of the Identifier object and returned."
+}
+{
+  "method_name": "link",
+  "package_name": "com.example.demo.service",
+  "class_name": "Process",
+  "parameters": [],
+  "is_interface": false,
+  "invoked_method": ["findMaxPin", "getConceptSchema", "getColumns", "getAttributeValue", "getInsertStr", "insert"],
+  "method_desc": "This method is the main method of the Process class. It is responsible for linking the vendor and product data. It first retrieves the maximum pin value from the SQLProcess class and increments it by 1. Then, it retrieves the concept schema for the vendor and product entities from the InitService class. It creates a mapping between the attributes of the vendor and product entities based on the mappings defined in the InitService class. It then creates an Identifier object for the vendor entity and sets its concept and attribute values. Next, it creates an empty map to store the attribute values for the product entity. It iterates over the mappings and retrieves the corresponding attribute values from the vendor Identifier object and adds them to the product attribute map. After that, it creates an Identifier object for the product entity and sets its concept and attribute values using the product attribute map. It then generates the insert statement for the product entity using the productWrite class and replaces the placeholders with the actual attribute values. Finally, it inserts the product entity into the database using the SQLProcess class and returns a Response object containing the pin value."
+}
+{
+  "method_name": "init",
+  "package_name": "com.example.demo.service",
+  "class_name": "InitService",
+  "parameters": [],
+  "is_interface": false,
+  "invoked_method": [
+    "sqlProcess.selectMapping()",
+    "loadSchema(EnumType.VENDOR)",
+    "loadSchema(EnumType.PRODUCT)"
+  ],
+  "method_desc": "This method is annotated with @PostConstruct and is called after the bean initialization. It initializes the mappings by calling the 'selectMapping' method of the 'sqlProcess' object. Then, it loads the schema for the 'VENDOR' and 'PRODUCT' enum types by calling the 'loadSchema' method with the respective enum types as parameters."
+}
+
+{
+  "method_name": "loadSchema",
+  "package_name": "com.example.demo.service",
+  "class_name": "InitService",
+  "parameters": [
+    "EnumType enumType"
+  ],
+  "is_interface": false,
+  "invoked_method": [
+    "sqlProcess.selectDCByDCTable(enumType.getTableName())",
+    "sqlProcess.selectDCAByDCId(dc.getDcId())",
+    "productWrite.insertSt(concept)"
+  ],
+  "method_desc": "This method is responsible for loading the schema for a given enum type. It creates a new 'Concept' object and sets the enum type. Then, it retrieves the 'DC' object by calling the 'selectDCByDCTable' method of the 'sqlProcess' object with the table name obtained from the enum type. Next, it retrieves a list of 'DCA' objects by calling the 'selectDCAByDCId' method of the 'sqlProcess' object with the 'dcId' obtained from the 'DC' object. The 'Concept' object is then populated with the name and attributes obtained from the 'DCA' objects. Finally, the 'Concept' object is added to the 'conceptSchema' map using the enum type as the key. If the enum type is 'PRODUCT', the 'insertSt' method of the 'productWrite' object is called with the 'concept' as the parameter."
+}
+{
+  "method_name": "insertSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "ProductWrite",
+  "parameters": [
+    "Concept concept"
+  ],
+  "is_interface": false,
+  "invoked_method": [],
+  "method_desc": "This method takes a Concept object as a parameter and constructs an SQL insert statement based on the concept's enum type and columns. The insert statement is stored in the insertStr variable."
+}
+{
+  "method_name": "getSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "VendorWrite",
+  "parameters": [
+    {
+      "name": "concept",
+      "type": "Concept"
+    },
+    {
+      "name": "vin",
+      "type": "Integer"
+    }
+  ],
+  "is_interface": false,
+  "invoked_methods": [
+    "sqlProcess.select",
+    "concept.getColumns",
+    "map.put",
+    "identifier.setAttributeValue"
+  ],
+  "method_desc": "This method retrieves an Identifier object based on the given Concept and vin. It first creates an empty Identifier object and a HashMap to store the attribute-value pairs. Then, it constructs a SQL query using the enumType's table name and the vin parameter. The query is executed using the sqlProcess's select method, and the first result is retrieved. Next, for each column in the concept's columns list, the method retrieves the corresponding value from the result map and puts it into the attribute-value map. Finally, the attribute-value map is set as the attributeValue of the identifier object, which is then returned."
+}
+{
+  "methods": [
+    {
+      "method_name": "link",
+      "package_name": "com.example.demo.service",
+      "class_name": "Process",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        "sqlProcess.findMaxPin",
+        "initService.getConceptSchema",
+        "vendorWrite.getSt",
+        "initService.getMappings",
+        "productWrite.getInsertStr",
+        "sqlProcess.insert"
+      ],
+      "method_desc": "This method performs a series of operations to link a vendor with a product. It first retrieves the maximum pin value from the SQLProcess object and increments it by 1. Then, it retrieves the concept schema for the VENDOR and PRODUCT entities from the InitService object. It creates a map of attribute IDs to attributes for both concepts. Next, it retrieves the vendor identifier using the getSt method of the VendorWrite object. It retrieves a list of mappings from the InitService object. It then iterates over each mapping and retrieves the corresponding attributes from the attribute maps. It populates a map of pin attributes and their corresponding values using the vendor identifier. It creates a new identifier object for the pin concept and sets its concept and attribute value. It retrieves the insert statement from the ProductWrite object and replaces the first occurrence of '?' with the pin value. It then replaces each remaining '?' with the corresponding attribute value from the pin identifier. Finally, it inserts the resulting insert statement into the SQLProcess object and returns a new Response object with the pin value."
+    }
+  ]
+}
+{
+  "methods": [
+    {
+      "method_name": "init",
+      "package_name": "com.example.demo.service",
+      "class_name": "InitService",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        "SQLProcess.selectMapping",
+        "loadSchema"
+      ],
+      "method_desc": "This method is annotated with @PostConstruct and is called after the bean initialization. It initializes the mappings by calling the 'selectMapping' method from the 'SQLProcess' class. Then, it loads the schema for the 'VENDOR' and 'PRODUCT' enum types by calling the 'loadSchema' method."
+    },
+    {
+      "method_name": "loadSchema",
+      "package_name": "com.example.demo.service",
+      "class_name": "InitService",
+      "parameters": [
+        "EnumType enumType"
+      ],
+      "is_interface": false,
+      "invoked_methods": [
+        "SQLProcess.selectDCByDCTable",
+        "SQLProcess.selectDCAByDCId",
+        "Concept.setEnumType",
+        "Concept.setName",
+        "Attribute.<init>",
+        "Concept.setColumns",
+        "productWrite.insertSt"
+      ],
+      "method_desc": "This method loads the schema for the given 'enumType'. It creates a new 'Concept' object and sets the 'enumType' property. Then, it retrieves the 'DC' object by calling the 'selectDCByDCTable' method from the 'SQLProcess' class. Next, it retrieves a list of 'DCA' objects by calling the 'selectDCAByDCId' method. It sets the 'name' property of the 'Concept' object using the 'name' property of the 'DC' object. It creates a list of 'Attribute' objects by mapping the 'DCA' objects. Finally, it adds the 'Concept' object to the 'conceptSchema' map and inserts the concept into the database if the 'enumType' is 'PRODUCT' by calling the 'insertSt' method from the 'productWrite' object."
+    }
+  ]
+}
+{
+  "method_name": "insertSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "ProductWrite",
+  "parameters": [
+    "Concept concept"
+  ],
+  "is_interface": false,
+  "invoked_methods": [],
+  "method_desc": "This method takes a Concept object as a parameter and constructs an SQL insert statement based on the concept's enum type and columns. The insert statement is stored in the insertStr variable."
+}
+{
+  "method_name": "getSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "VendorWrite",
+  "parameters": [
+    {
+      "name": "concept",
+      "type": "Concept"
+    },
+    {
+      "name": "vin",
+      "type": "Integer"
+    }
+  ],
+  "is_interface": false,
+  "invoked_methods": [
+    "Map.put",
+    "String.valueOf",
+    "sqlProcess.select",
+    "sqlProcess.select.get"
+  ],
+  "method_desc": "This method retrieves an Identifier object based on the given Concept and vin. It creates a new Identifier object and a HashMap to store the attribute-value pairs. It constructs a SQL query using the concept's enum type's table name and the vin parameter. It then retrieves the result of the SQL query using the sqlProcess's select method and retrieves the first element from the result list. It iterates over the concept's columns and puts the column and its corresponding value from the result into the map. Finally, it sets the attribute-value map in the identifier object and returns the identifier."
+}
+{
+  "methods": [
+    {
+      "method_name": "link",
+      "package_name": "com.example.demo.service",
+      "class_name": "Process",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        "SQLProcess.findMaxPin",
+        "InitService.getConceptSchema",
+        "VendorWrite.getSt",
+        "InitService.getMappings",
+        "ProductWrite.getInsertStr",
+        "Identifier.setConcept",
+        "Identifier.setAttributeValue",
+        "SQLProcess.insert",
+        "Response.<init>"
+      ],
+      "method_desc": "This method performs a series of operations to link a vendor with a product. It first retrieves the maximum pin value from the SQLProcess and increments it by 1. Then, it retrieves the concept schema for the VENDOR and PRODUCT entities from the InitService. It also retrieves the attribute mappings from the InitService. Next, it creates an identifier for the VENDOR concept using the vendorWrite.getSt method. It then iterates over the mappings and retrieves the corresponding attributes for the VIN and PIN DCA IDs. It populates a map with the attribute-value pairs for the PIN identifier. After that, it creates an identifier for the PIN concept and sets its attribute-value map. It constructs the insert statement for the product using the productWrite.getInsertStr method and replaces the placeholders with the PIN value and attribute values. Finally, it inserts the record into the database using the SQLProcess and returns a new Response object with the PIN value."
+    }
+  ]
+}
+{
+  "methods": [
+    {
+      "method_name": "init",
+      "package_name": "com.example.demo.service",
+      "class_name": "InitService",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        "SQLProcess.selectMapping()",
+        "loadSchema(EnumType.VENDOR)",
+        "loadSchema(EnumType.PRODUCT)"
+      ],
+      "method_desc": "This method is annotated with @PostConstruct and is called after the bean initialization. It initializes the mappings by calling the selectMapping() method of the SQLProcess class. Then, it loads the schema for the EnumType.VENDOR and EnumType.PRODUCT by calling the loadSchema() method."
+    },
+    {
+      "method_name": "loadSchema",
+      "package_name": "com.example.demo.service",
+      "class_name": "InitService",
+      "parameters": [
+        "EnumType enumType"
+      ],
+      "is_interface": false,
+      "invoked_methods": [
+        "SQLProcess.selectDCByDCTable(enumType.getTableName())",
+        "SQLProcess.selectDCAByDCId(dc.getDcId())",
+        "new Attribute(dca.getDcaId(), dca.getField(), dca.getName())",
+        "productWrite.insertSt(concept)"
+      ],
+      "method_desc": "This method is used to load the schema for a given EnumType. It creates a new Concept object and sets the enumType. Then, it retrieves the DC object using the selectDCByDCTable() method of the SQLProcess class. It also retrieves a list of DCA objects using the selectDCAByDCId() method. The method then sets the name of the concept and creates a list of Attribute objects using the DCA objects. Finally, it adds the concept to the conceptSchema map and if the enumType is EnumType.PRODUCT, it calls the insertSt() method of the productWrite object."
+    }
+  ]
+}
+{
+  "method_name": "insertSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "ProductWrite",
+  "parameters": [
+    "Concept concept"
+  ],
+  "is_interface": false,
+  "invoked_methods": [],
+  "method_desc": "This method takes a Concept object as a parameter and constructs an SQL insert statement based on the concept's enum type and columns. The insert statement is stored in the insertStr variable."
+}
+{
+  "method_name": "getSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "VendorWrite",
+  "parameters": [
+    {
+      "name": "concept",
+      "type": "Concept"
+    },
+    {
+      "name": "vin",
+      "type": "Integer"
+    }
+  ],
+  "is_interface": false,
+  "invoked_methods": [
+    "Map.put",
+    "String.valueOf",
+    "sqlProcess.select",
+    "sqlProcess.select.get"
+  ],
+  "method_desc": "This method retrieves an Identifier object based on the given Concept and vin. It creates a new Identifier object and a HashMap to store the attribute-value pairs. It constructs a SQL query using the concept's enum type's table name and the vin parameter. It then retrieves the result of the SQL query using the sqlProcess's select method and retrieves the first element from the result list. It iterates over the concept's columns and puts the column and its corresponding value from the result into the map. Finally, it sets the attribute-value map in the identifier object and returns the identifier."
+}
+{
+  "methods": [
+    {
+      "method_name": "link",
+      "package_name": "com.example.demo.service",
+      "class_name": "Process",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        "SQLProcess.findMaxPin",
+        "InitService.getConceptSchema",
+        "VendorWrite.getSt",
+        "InitService.getMappings",
+        "ProductWrite.getInsertStr",
+        "Identifier.setConcept",
+        "Identifier.setAttributeValue",
+        "SQLProcess.insert",
+        "Response.Response"
+      ],
+      "method_desc": "This method performs a series of operations to link a vendor with a product. It first retrieves the maximum pin value from the SQLProcess and increments it by 1 to get the new pin value. Then, it retrieves the concept schema for the vendor and product entities from the InitService. It creates a mapping of attribute IDs to attributes for both the vendor and product concepts. Next, it retrieves the vendor identifier using the vendorWrite service and the vinConcept. It retrieves the list of mappings from the InitService. It then creates a map of attribute to value for the product identifier by iterating over the mappings and retrieving the corresponding attributes from the vinAttrMap and pinAttrMap. It creates a new Identifier object for the product concept and sets the concept and attribute value. It retrieves the insert statement from the productWrite service and replaces the first occurrence of '?' with the pin value. It then iterates over the columns of the pinConcept and replaces each '?' in the insert statement with the corresponding attribute value from the pinIdentifier. Finally, it inserts the modified insert statement into the SQLProcess and returns a new Response object with the pin value."
+    }
+  ]
+}
+{
+  "methods": [
+    {
+      "method_name": "init",
+      "package_name": "com.example.demo.service",
+      "class_name": "InitService",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        "sqlProcess.selectMapping()",
+        "loadSchema(EnumType.VENDOR)",
+        "loadSchema(EnumType.PRODUCT)"
+      ],
+      "method_desc": "This method is annotated with @PostConstruct and is called after the bean initialization. It initializes the mappings by calling the 'selectMapping' method of 'sqlProcess' object. Then, it loads the schema for 'EnumType.VENDOR' and 'EnumType.PRODUCT' by calling the 'loadSchema' method with the respective enum types as parameters."
+    },
+    {
+      "method_name": "loadSchema",
+      "package_name": "com.example.demo.service",
+      "class_name": "InitService",
+      "parameters": [
+        "EnumType enumType"
+      ],
+      "is_interface": false,
+      "invoked_methods": [
+        "sqlProcess.selectDCByDCTable(enumType.getTableName())",
+        "sqlProcess.selectDCAByDCId(dc.getDcId())",
+        "new Attribute(dca.getDcaId(), dca.getField(), dca.getName())",
+        "productWrite.insertSt(concept)"
+      ],
+      "method_desc": "This method is responsible for loading the schema for a given 'enumType'. It creates a new 'Concept' object and sets the 'enumType' and 'name' properties. It then retrieves the 'DC' object by calling the 'selectDCByDCTable' method of 'sqlProcess' object with the 'enumType' table name as a parameter. Next, it retrieves a list of 'DCA' objects by calling the 'selectDCAByDCId' method of 'sqlProcess' object with the 'dc.getDcId()' as a parameter. It maps the 'DCA' objects to 'Attribute' objects by using the 'map' function and creates a list of 'Attribute' objects. Finally, it adds the 'enumType' and 'concept' to the 'conceptSchema' map and if the 'enumType' is 'EnumType.PRODUCT', it calls the 'insertSt' method of 'productWrite' object with the 'concept' as a parameter."
+    }
+  ]
+}
+{
+  "method_name": "insertSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "ProductWrite",
+  "parameters": "Concept concept",
+  "is_interface": false,
+  "invoked_methods": "",
+  "method_desc": "This method takes a Concept object as a parameter and constructs an SQL insert statement based on the concept's enum type and columns. The insert statement is stored in the insertStr variable."
+}
+{
+  "method_name": "getSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "VendorWrite",
+  "parameters": [
+    {
+      "name": "concept",
+      "type": "Concept"
+    },
+    {
+      "name": "vin",
+      "type": "Integer"
+    }
+  ],
+  "is_interface": false,
+  "invoked_methods": [
+    {
+      "variable_class_name": "SQLProcess",
+      "variable_name": "sqlProcess",
+      "method_name": "select"
+    }
+  ],
+  "method_desc": "This method retrieves an Identifier object based on the given Concept and vin. It queries the database using the SQLProcess class to retrieve the necessary data. The retrieved data is then mapped to the Attribute objects of the Concept and stored in a map. Finally, the map is set as the attribute value of the Identifier object and returned."
+}
+{
+  "methods": [
+    {
+      "method_name": "link",
+      "package_name": "com.example.demo.service",
+      "class_name": "Process",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        {
+          "variable_class_name": "SQLProcess",
+          "variable_name": "sqlProcess",
+          "method_name": "findMaxPin"
+        },
+        {
+          "variable_class_name": "InitService",
+          "variable_name": "initService",
+          "method_name": "getConceptSchema"
+        },
+        {
+          "variable_class_name": "Concept",
+          "variable_name": "vinConcept",
+          "method_name": "getColumns"
+        },
+        {
+          "variable_class_name": "Concept",
+          "variable_name": "pinConcept",
+          "method_name": "getColumns"
+        },
+        {
+          "variable_class_name": "VendorWrite",
+          "variable_name": "vendorWrite",
+          "method_name": "getSt"
+        },
+        {
+          "variable_class_name": "InitService",
+          "variable_name": "initService",
+          "method_name": "getMappings"
+        },
+        {
+          "variable_class_name": "ProductWrite",
+          "variable_name": "productWrite",
+          "method_name": "getInsertStr"
+        },
+        {
+          "variable_class_name": "Identifier",
+          "variable_name": "vinIdentifier",
+          "method_name": "getAttributeValue"
+        },
+        {
+          "variable_class_name": "Identifier",
+          "variable_name": "pinIdentifier",
+          "method_name": "getAttributeValue"
+        },
+        {
+          "variable_class_name": "SQLProcess",
+          "variable_name": "sqlProcess",
+          "method_name": "insert"
+        }
+      ],
+      "method_desc": "This method performs a series of operations to link a vendor and a product. It retrieves the maximum pin value from the SQLProcess class and increments it by 1. It then retrieves the concept schema for the VENDOR and PRODUCT entities from the InitService class. It creates a mapping between the attributes of the VENDOR and PRODUCT entities based on the mappings retrieved from the InitService class. It creates an Identifier object for the VENDOR entity and sets its concept and attribute values. It creates an empty map to store the attribute values for the PRODUCT entity. It iterates over the mappings and retrieves the corresponding attribute values from the VENDOR entity and stores them in the map for the PRODUCT entity. It creates an Identifier object for the PRODUCT entity and sets its concept and attribute values. It generates an insert statement for the PRODUCT entity and replaces the placeholder '?' with the pin value and the attribute values. Finally, it inserts the generated insert statement into the database using the SQLProcess class and returns a Response object with the pin value."
+    }
+  ]
+}
+{
+  "method_name": "init",
+  "package_name": "com.example.demo.service",
+  "class_name": "InitService",
+  "parameters": [],
+  "is_interface": false,
+  "invoked_methods": [
+    {
+      "variable_class_name": "SQLProcess",
+      "variable_name": "sqlProcess",
+      "method_name": "selectMapping"
+    },
+    {
+      "variable_class_name": "SQLProcess",
+      "variable_name": "sqlProcess",
+      "method_name": "selectDCByDCTable"
+    },
+    {
+      "variable_class_name": "SQLProcess",
+      "variable_name": "sqlProcess",
+      "method_name": "selectDCAByDCId"
+    },
+    {
+      "variable_class_name": "ProductWrite",
+      "variable_name": "productWrite",
+      "method_name": "insertSt"
+    }
+  ],
+  "method_desc": "This method initializes the mappings and loads the schema for the VENDOR and PRODUCT enum types. It retrieves the mappings from the SQLProcess class using the selectMapping method. Then, it loads the schema for each enum type by creating a new Concept object and setting its properties. It retrieves the DC and DCA data from the SQLProcess class using the selectDCByDCTable and selectDCAByDCId methods respectively. It creates a list of Attribute objects using the DCA data. Finally, it adds the Concept object to the conceptSchema map and inserts the concept into the database if the enum type is PRODUCT."
+}
+{
+  "method_name": "insertSt",
+  "package_name": "com.example.demo.service",
+  "class_name": "ProductWrite",
+  "parameters": [
+    "Concept concept"
+  ],
+  "is_interface": false,
+  "invoked_methods": [
+    {
+      "variable_class_name": "StringBuilder",
+      "variable_name": "stringBuilder",
+      "method_name": "append"
+    },
+    {
+      "variable_class_name": "Concept",
+      "variable_name": "concept",
+      "method_name": "getEnumType"
+    },
+    {
+      "variable_class_name": "Concept",
+      "variable_name": "concept",
+      "method_name": "getColumns"
+    }
+  ],
+  "method_desc": "This method takes a Concept object as a parameter and constructs an SQL insert statement based on the concept's enum type and columns. The insert statement is stored in the insertStr variable."
+}
