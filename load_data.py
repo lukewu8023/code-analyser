@@ -21,6 +21,7 @@ embeddings_model = OpenAIEmbeddings()
 # [test embedding]
 # embeddings = embeddings_model.embed_documents(["Hi there!"])
 # print(len(embeddings[0]))
+# print(len(embeddings))
 
 client = weaviate.Client(os.environ.get("WEAVIATE_URL"))
 print(f"+++Weaviate is ready? {client.is_ready()}")
@@ -30,17 +31,7 @@ with client.batch as batch:
     for i, method in enumerate(data["methods"]):
         print(f"+++importing method info: {i+1}")
 
-        properties = {
-            "method_name": method["method_name"],
-            "package_name": method["package_name"],
-            "class_name": method["class_name"],
-            "is_interface": method["is_interface"],
-            "parameters": method["parameters"],
-            "invoked_methods": method["invoked_methods"],
-            "method_desc": method["method_desc"],
-        }
-
-        embed_document = (
+        method_summary = (
             "method name is ["
             + method["method_name"]
             + "], package name is ["
@@ -58,10 +49,22 @@ with client.batch as batch:
             + method["method_desc"]
             + "]"
         )
-        print(f"+++embed document: {embed_document}")
 
-        embeddings = embeddings_model.embed_documents(embed_document)
+        properties = {
+            "method_name": method["method_name"],
+            "package_name": method["package_name"],
+            "class_name": method["class_name"],
+            "is_interface": method["is_interface"],
+            "parameters": method["parameters"],
+            "invoked_methods": method["invoked_methods"],
+            "method_desc": method["method_desc"],
+            "method_summary": method_summary,
+        }
+
+        embed_document = method_summary
+        print(f"+++embed document: {embed_document}")
+        embeddings = embeddings_model.embed_documents([embed_document])
+        print(len(embeddings))
         print(len(embeddings[0]))
-        # print(embeddings[0])
 
         batch.add_data_object(properties, "Codev1", vector=embeddings[0])

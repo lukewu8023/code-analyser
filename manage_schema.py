@@ -36,6 +36,7 @@ new_class_obj = {
             ],
         },
         {"name": "method_desc", "dataType": ["text"]},
+        {"name": "method_summary", "dataType": ["text"]},
     ],
     "vectorizer": "none",
 }
