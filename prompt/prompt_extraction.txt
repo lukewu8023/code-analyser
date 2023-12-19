@@ -10,7 +10,7 @@ extract the below information:
 4) what are the parameters of method
 5) is it a method in an interface
 6) what are the invoked methods this method is invoking in the method body, list 'variable class name', 'variable name' and 'method name' for each invoked method
-7) description of single method, describe as details as possible, note the formula in the description if have in the code
+7) description of single method, describe as detailed as possible, note the formula in the description if have in the code
 
 Output the json string with the above information to below attributes, data seperate by each method:
 "method_name"
