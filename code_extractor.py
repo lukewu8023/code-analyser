@@ -1,5 +1,4 @@
 import os
-from langchain import PromptTemplate
 import key_config
 
 from langchain.chat_models import ChatOpenAI
