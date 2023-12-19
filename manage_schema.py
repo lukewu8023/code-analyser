@@ -5,8 +5,8 @@ import key_config
 
 client = weaviate.Client(os.environ.get("WEAVIATE_URL"))
 
-client.schema.delete_class("Codev1")
-class_name = "Codev1"
+# client.schema.delete_class("Code4v1")
+class_name = "Code4v1"
 
 new_class_obj = {
     "class": class_name,
@@ -28,7 +28,10 @@ new_class_obj = {
             "dataType": ["object[]"],
             "nestedProperties": [
                 {"dataType": ["text"], "name": "variable_class_name"},
-                {"dataType": ["text"], "name": "variable_name"},
+                {
+                    "dataType": ["text"],
+                    "name": "variable_name",
+                },  # need handle null vaule
                 {"dataType": ["text"], "name": "method_name"},
             ],
         },
