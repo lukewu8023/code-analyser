@@ -64,4 +64,4 @@ with client.batch as batch:
         print(len(embeddings[0]))
         # print(embeddings[0])
 
-        batch.add_data_object(properties, "Code4v1", vector=embeddings[0])
+        batch.add_data_object(properties, "Codev1", vector=embeddings[0])

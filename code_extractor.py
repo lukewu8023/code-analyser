@@ -49,7 +49,7 @@ template_string = contents
 prompt_template = ChatPromptTemplate.from_template(template_string)
 
 code = ""
-with open("data/code_4.json", "a") as file:
+with open("data/code.json", "a") as file:
     for document in documents:
         name = document.metadata["source"]
         code = document.page_content
