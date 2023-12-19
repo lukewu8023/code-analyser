@@ -1,0 +1,97 @@
+[
+  {
+    "_additional": { "id": "0022975e-da80-4e23-9fa8-e173a6bbe291" },
+    "method_desc": "This is the main method of the DemoApplication class. It is the entry point of the application and is responsible for starting the Spring Boot application.",
+    "method_name": "main"
+  },
+  {
+    "_additional": { "id": "09ddb9d3-fe64-4d78-bcd6-1e2106d873ea" },
+    "method_desc": "This method initializes the mappings and loads the schema for the VENDOR and PRODUCT enum types. It retrieves the mappings from the SQLProcess class using the selectMapping method. Then, it loads the schema for each enum type by creating a new Concept object and setting its properties. It retrieves the DC and DCA data from the SQLProcess class using the selectDCByDCTable and selectDCAByDCId methods respectively. It creates a list of Attribute objects using the DCA data. Finally, it adds the concept to the conceptSchema map and inserts the concept into the productWrite using the insertSt method if the enumType is PRODUCT.",
+    "method_name": "init"
+  },
+  {
+    "_additional": { "id": "0a1bc305-ac10-4ff2-b42f-e035bcd76980" },
+    "method_desc": "This is the constructor for the Identifier class. It initializes the concept and attributeValue variables.",
+    "method_name": "Identifier"
+  },
+  {
+    "_additional": { "id": "0b5b0e43-0abd-4763-bfaf-9efbf475fcd6" },
+    "method_desc": "This is a constructor method for the Attribute class. It takes three parameters: dcaId of type Integer, fieldName of type String, and name of type String. It initializes the corresponding class variables with the provided values.",
+    "method_name": "Attribute"
+  },
+  {
+    "_additional": { "id": "0d56ee38-f6b5-4654-8b97-4ea90a621801" },
+    "method_desc": "This method is used to find the maximum pin. It does not take any parameters and returns an Integer value.",
+    "method_name": "findMaxPin"
+  },
+  {
+    "_additional": { "id": "17919d25-4180-4fb3-a511-2ecbbbd1aa66" },
+    "method_desc": "This method retrieves an Identifier object based on the given Concept and vin. It queries the database using the SQLProcess class to retrieve the necessary data. The retrieved data is then mapped to the Attribute objects of the Concept and stored in a map. Finally, the map is set as the attribute value of the Identifier object and returned.",
+    "method_name": "getSt"
+  },
+  {
+    "_additional": { "id": "1e2668fd-79db-4891-a4d6-8eb9d17cd662" },
+    "method_desc": "This is a constructor method for the DC class.",
+    "method_name": "DC"
+  },
+  {
+    "_additional": { "id": "5e589b1a-8599-43dc-b876-da491c5d85dc" },
+    "method_desc": "This is the constructor method for the EnumType class. It takes two parameters, tableName and fieldName, both of type String. The method initializes the tableName and fieldName variables with the values passed as arguments.",
+    "method_name": "EnumType"
+  },
+  {
+    "_additional": { "id": "61cb5a1d-eeae-4830-b09b-f3375c77ef47" },
+    "method_desc": "This method is used to retrieve a list of DCA objects based on the given DC ID. It takes the DC ID as a parameter and returns a list of DCA objects.",
+    "method_name": "selectDCAByDCId"
+  },
+  {
+    "_additional": { "id": "61ccf054-78c0-4376-b643-5a2d5d7c6f39" },
+    "method_desc": "This method takes a Concept object as a parameter and constructs an SQL insert statement based on the concept's enum type and columns. The insert statement is stored in the insertStr variable.",
+    "method_name": "insertSt"
+  },
+  {
+    "_additional": { "id": "68ddcce9-25bb-425b-84d1-c4bd560a8802" },
+    "method_desc": "This method performs a series of operations to link a vendor and a product. It retrieves the maximum pin value from the SQLProcess class and increments it by 1. It then retrieves the concept schema for the VENDOR and PRODUCT entities from the InitService class. It creates a mapping between the attributes of the VENDOR and PRODUCT concepts based on the mappings obtained from the InitService class. It creates an Identifier object for the VENDOR concept and retrieves the attribute values using the getAttributeValue method. It creates an empty map to store the attribute values for the PRODUCT concept. It iterates over the mappings and retrieves the attribute values from the VENDOR Identifier object and stores them in the map using the corresponding attribute of the PRODUCT concept. It creates an Identifier object for the PRODUCT concept and sets the concept and attribute values using the map. It generates an insert statement using the ProductWrite class and replaces the placeholder with the pin value. It then replaces the placeholders in the insert statement with the attribute values from the PRODUCT Identifier object. Finally, it inserts the generated insert statement into the database using the SQLProcess class and returns a Response object with the pin value.",
+    "method_name": "link"
+  },
+  {
+    "_additional": { "id": "7462c74b-38df-48ee-aa38-1444cbfa86fe" },
+    "method_desc": "This method is used to retrieve data from the database. It takes a SQL query as a parameter and returns a list of maps containing the selected data.",
+    "method_name": "select"
+  },
+  {
+    "_additional": { "id": "7d10350d-2f0a-4164-8a54-5e1babb1ff68" },
+    "method_desc": "This method is the entry point for the test case. It is annotated with @Test and is responsible for loading the application context.",
+    "method_name": "contextLoads"
+  },
+  {
+    "_additional": { "id": "b046fffc-0711-4d36-93a2-7565065bb210" },
+    "method_desc": "This method is used to insert data into the database. It takes a SQL query as a parameter.",
+    "method_name": "insert"
+  },
+  {
+    "_additional": { "id": "b16c8fd6-4120-473e-9f24-42d1d10896ad" },
+    "method_desc": "This is a constructor method for the Response class. It takes an Integer parameter called productId and assigns it to the private field of the same name.",
+    "method_name": "Response"
+  },
+  {
+    "_additional": { "id": "c7d13909-dc91-4730-9224-a576b8a152af" },
+    "method_desc": "This method is used to retrieve a DC object based on the given table name. It takes the table name as a parameter and returns a DC object.",
+    "method_name": "selectDCByDCTable"
+  },
+  {
+    "_additional": { "id": "d250b0bd-e4f9-4d79-b9ef-9978de3788a5" },
+    "method_desc": "This is the constructor for the Concept class. It initializes the enumType, name, and columns properties.",
+    "method_name": "Concept"
+  },
+  {
+    "_additional": { "id": "e1e747d4-862e-4254-b3a4-c7d456b93609" },
+    "method_desc": "This method is the entry point for processing a VIN. It is invoked when a GET request is made to the root URL. The method returns a Response object which contains the result of the processing. The method does not have any parameters.",
+    "method_name": "processVin"
+  },
+  {
+    "_additional": { "id": "ff3343e6-17b1-442c-be2a-316d30841b0c" },
+    "method_desc": "This method is used to retrieve a list of Mapping objects. It does not take any parameters and returns a list of Mapping objects.",
+    "method_name": "selectMapping"
+  }
+]
