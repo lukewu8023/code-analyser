@@ -1,13 +1,13 @@
-Plan:
+Basesd on user inquery to genarate plan exactly basesd on below steps:
 1. Analyze the details of the structure of the database schema (ignore user inquery in this step) and list
 2. Analyze the retrieved meta data (ignore user inquery in this step) and list
-3. Analyze the data relationship of the attribute provided by user
-4. Respond to user's inquery
+3. Given the retrieved information (don't use tool if having enough informtion already), analyze the data relationship of the attribute (replace the attribute name from input of user) 
 
-Plan return format:
+generated plan with format as below (return one 'Plan' only):
 ```
 Plan:
 1. xxx
 2. xxx
 ...
 ```
+
