@@ -1,0 +1,274 @@
+{
+  "methods": [
+    {
+      "method_name": "contextLoads",
+      "package_name": "com.example.demo",
+      "class_name": "DemoApplicationTests",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [],
+      "method_desc": "The method 'contextLoads' is a test method that doesn't take any parameters. It's annotated with @Test, indicating it's a test case. The method body is empty, which implies that this test case is only ensuring that the Spring application context loads successfully without throwing any exceptions. There are no invoked methods within this method body, and it's not part of an interface."
+    },
+    {
+      "method_name": "main",
+      "package_name": "com.example.demo",
+      "class_name": "DemoApplication",
+      "parameters": [
+        {
+          "type": "String[]",
+          "name": "args"
+        }
+      ],
+      "is_interface": false,
+      "invoked_methods": [
+        {
+          "variable_class_name": "SpringApplication",
+          "variable_name": "",
+          "method_name": "run"
+        }
+      ],
+      "method_desc": "The 'main' method is the entry point of the Spring Boot application. It takes an array of Strings as arguments, which can be used to pass command-line parameters. The method does not return any value as its return type is void. Inside the method body, it invokes the 'run' method of the 'SpringApplication' class, passing 'DemoApplication.class' and 'args' as arguments. This 'run' method is responsible for bootstrapping and launching the Spring application."
+    },
+    {
+      "method_name": "EnumType",
+      "package_name": "com.example.demo.entity",
+      "class_name": "EnumType",
+      "parameters": [
+        {
+          "type": "String",
+          "name": "tableName"
+        },
+        {
+          "type": "String",
+          "name": "fieldName"
+        }
+      ],
+      "is_interface": false,
+      "invoked_methods": [],
+      "method_desc": "The 'EnumType' method is a constructor for the enum 'EnumType'. It initializes the enum with two parameters: 'tableName' and 'fieldName'. The 'tableName' parameter is a String that represents the name of the table associated with the enum constant. The 'fieldName' parameter is a String that represents the name of the field associated with the enum constant. There are no methods invoked within the constructor, and it does not follow any specific formula."
+    },
+    {
+      "method_name": "insert",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "sql",
+          "type": "String"
+        }
+      ],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method is designed to execute an insert operation in the database. The SQL statement to be executed is passed as a parameter. Since this is an interface, the actual implementation is not shown here, and there are no invoked methods within this method."
+    },
+    {
+      "method_name": "select",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "sql",
+          "type": "String"
+        }
+      ],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method is intended to execute a select query in the database. The SQL query string is passed as a parameter. It returns a list of maps, where each map represents a row with column names as keys and corresponding data as values. As this is an interface, the method body is not provided, hence no invoked methods."
+    },
+    {
+      "method_name": "selectDCByDCTable",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "table",
+          "type": "String"
+        }
+      ],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method retrieves a DC object from the database based on the specified table name. The table name is passed as a parameter. The method returns a single DC object. As an interface method, the implementation details and invoked methods are not present."
+    },
+    {
+      "method_name": "selectDCAByDCId",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [
+        {
+          "name": "dcId",
+          "type": "Integer"
+        }
+      ],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method fetches a list of DCA objects from the database that are associated with a given DC id. The DC id is provided as a parameter. It returns a list of DCA objects. There are no invoked methods as this is an interface definition."
+    },
+    {
+      "method_name": "selectMapping",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method is used to retrieve a list of Mapping objects from the database. It does not take any parameters. The method returns a list of Mapping objects. Since this is an interface, there is no method body or invoked methods."
+    },
+    {
+      "method_name": "findMaxPin",
+      "package_name": "com.example.demo.dao",
+      "class_name": "SQLProcess",
+      "parameters": [],
+      "is_interface": true,
+      "invoked_methods": [],
+      "method_desc": "This method finds the maximum 'pin' value from a set of records in the database. It does not require any parameters and returns an Integer representing the highest 'pin' value found. As an interface, the method does not contain an implementation or any invoked methods."
+    },
+    {
+      "method_name": "processVin",
+      "package_name": "com.example.demo.controller",
+      "class_name": "ProcessController",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        {
+          "variable_class_name": "Process",
+          "variable_name": "process",
+          "method_name": "link"
+        }
+      ],
+      "method_desc": "The method 'processVin' is a public method with no parameters, mapped to the root URL path '/' via the @GetMapping annotation. It is not part of an interface. When a GET request is made to the root URL, this method is invoked. Inside the method body, it calls the 'link' method on the 'process' object, which is an instance of the 'Process' class. The 'process' object is injected by Spring's dependency injection mechanism due to the @Autowired annotation. The 'link' method is expected to return a 'Response' object, which is then returned by the 'processVin' method to the client making the GET request. There is no formula present in the code."
+    },
+    {
+      "method_name": "getSt",
+      "package_name": "com.example.demo.service",
+      "class_name": "VendorWrite",
+      "parameters": [
+        {
+          "type": "Concept",
+          "name": "concept"
+        },
+        {
+          "type": "Integer",
+          "name": "vin"
+        }
+      ],
+      "is_interface": false,
+      "invoked_methods": [
+        {
+          "variable_class_name": "SQLProcess",
+          "variable_name": "sqlProcess",
+          "method_name": "select"
+        },
+        {
+          "variable_class_name": "List<Attribute>",
+          "variable_name": "concept.getColumns()",
+          "method_name": "forEach"
+        }
+      ],
+      "method_desc": "The method 'getSt' takes a 'Concept' object and an 'Integer' vin as parameters. It creates a new 'Identifier' object and a 'HashMap' to map 'Attribute' to 'String'. It constructs a SQL query to select all columns from a table named after the 'enumType' of the 'concept' where the 'vin' matches the provided value. The method then calls 'select' on an 'SQLProcess' object, passing the SQL query, and retrieves the first result from the returned list. For each 'Attribute' in the 'concept's columns, it puts an entry into the map with the 'Attribute' as the key and the corresponding value from the result set (converted to a 'String') as the value. Finally, it sets this map as the attribute values of the 'Identifier' object and returns it."
+    },
+    {
+      "method_name": "link",
+      "package_name": "com.example.demo.service",
+      "class_name": "Process",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        {
+          "variable_class_name": "SQLProcess",
+          "variable_name": "sqlProcess",
+          "method_name": "findMaxPin"
+        },
+        {
+          "variable_class_name": "InitService",
+          "variable_name": "initService",
+          "method_name": "getConceptSchema"
+        },
+        {
+          "variable_class_name": "VendorWrite",
+          "variable_name": "vendorWrite",
+          "method_name": "getSt"
+        },
+        {
+          "variable_class_name": "InitService",
+          "variable_name": "initService",
+          "method_name": "getMappings"
+        },
+        {
+          "variable_class_name": "ProductWrite",
+          "variable_name": "productWrite",
+          "method_name": "getInsertStr"
+        },
+        {
+          "variable_class_name": "SQLProcess",
+          "variable_name": "sqlProcess",
+          "method_name": "insert"
+        }
+      ],
+      "method_desc": "The 'link' method is responsible for creating a link between vendor and product data. It starts by finding the maximum 'pin' value in the database and increments it by 1 to ensure a unique 'pin' for the new product. It then retrieves the vendor and product concept schemas and maps their attributes to their respective DCA IDs. The method fetches the vendor identifier for a static 'vin' value and maps the vendor attributes to the product attributes based on predefined mappings. It constructs a new product identifier with these mapped values. The method then prepares an SQL insert statement by replacing placeholders with the 'pin' value and the mapped attribute values. Finally, it executes the insert statement to add the new product link to the database. The method returns a response object containing the new 'pin' value."
+    },
+    {
+      "method_name": "init",
+      "package_name": "com.example.demo.service",
+      "class_name": "InitService",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [
+        {
+          "variable_class_name": "SQLProcess",
+          "variable_name": "sqlProcess",
+          "method_name": "selectMapping"
+        },
+        {
+          "variable_class_name": "InitService",
+          "variable_name": "this",
+          "method_name": "loadSchema"
+        },
+        {
+          "variable_class_name": "InitService",
+          "variable_name": "this",
+          "method_name": "loadSchema"
+        }
+      ],
+      "method_desc": "The 'init' method is annotated with '@PostConstruct', indicating it will be executed after the bean's properties have been set by the Spring container. It initializes the 'mappings' field by calling 'selectMapping' on the 'sqlProcess' object. It then calls the 'loadSchema' method twice with different 'EnumType' parameters to load the schema for VENDOR and PRODUCT."
+    },
+    {
+      "method_name": "insertSt",
+      "package_name": "com.example.demo.service",
+      "class_name": "ProductWrite",
+      "parameters": [
+        {
+          "type": "Concept",
+          "name": "concept"
+        }
+      ],
+      "is_interface": false,
+      "invoked_methods": [
+        {
+          "variable_class_name": "Concept",
+          "variable_name": "concept",
+          "method_name": "getEnumType"
+        },
+        {
+          "variable_class_name": "EnumType",
+          "variable_name": "concept.getEnumType()",
+          "method_name": "getTableName"
+        },
+        {
+          "variable_class_name": "EnumType",
+          "variable_name": "concept.getEnumType()",
+          "method_name": "getFieldName"
+        },
+        {
+          "variable_class_name": "Concept",
+          "variable_name": "concept",
+          "method_name": "getColumns"
+        },
+        {
+          "variable_class_name": "Attribute",
+          "variable_name": "column",
+          "method_name": "getFieldName"
+        }
+      ],
+      "method_desc": "The method 'insertSt' is responsible for constructing an SQL insert statement for a given 'Concept' object. It starts by creating a new StringBuilder and appending the 'insert into' clause followed by the table name, which is retrieved from the 'EnumType' associated with the 'Concept' object. It then appends the field names for the insert statement, starting with the primary field from 'EnumType' and then iterating over each 'Attribute' in the 'Concept' object's 'columns' list to append additional field names. After the field names, the method appends the 'values' clause with placeholders '?' for each field value. The number of placeholders corresponds to the number of fields (1 for the primary field plus the number of attributes). Finally, the constructed SQL statement is converted to a string and assigned to the 'insertStr' member variable of the 'ProductWrite' class."
+    }
+  ]
+}

@@ -8,7 +8,7 @@ from langchain.embeddings import OpenAIEmbeddings
 embeddings_model = OpenAIEmbeddings()
 
 embedded_query = embeddings_model.embed_query(
-    "what's the invoked method of link method"
+    "what are the invoked methods of link method"
 )
 
 client = weaviate.Client(os.environ.get("WEAVIATE_URL"))
@@ -16,7 +16,7 @@ client = weaviate.Client(os.environ.get("WEAVIATE_URL"))
 response = (
     client.query.get("Codev1", ["method_summary"])
     .with_near_vector({"vector": embedded_query})
-    .with_limit(1)
+    .with_limit(3)
     .with_additional(["distance"])
     .do()
 )

@@ -1,0 +1,94 @@
+{
+  "tables": [
+    {
+      "table_name": "dc",
+      "schema_name": "meta",
+      "fields": [
+        {
+          "field_name": "dc_id",
+          "field_type": "int"
+        },
+        {
+          "field_name": "dc_table",
+          "field_type": "varchar"
+        },
+        {
+          "field_name": "dc_name",
+          "field_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "table_name": "dca",
+      "schema_name": "meta",
+      "fields": [
+        {
+          "field_name": "dc_id",
+          "field_type": "INT"
+        },
+        {
+          "field_name": "dca_id",
+          "field_type": "INT"
+        },
+        {
+          "field_name": "dca_field_name",
+          "field_type": "VARCHAR"
+        },
+        {
+          "field_name": "dca_name",
+          "field_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "table_name": "vin_pin_map",
+      "schema_name": "meta",
+      "fields": [
+        {
+          "field_name": "vin_dca_id",
+          "field_type": "INT"
+        },
+        {
+          "field_name": "pin_dca_id",
+          "field_type": "INT"
+        }
+      ]
+    },
+    {
+      "table_name": "dc",
+      "schema_name": "vendor",
+      "fields": [
+        {
+          "field_name": "vin",
+          "field_type": "INT"
+        },
+        {
+          "field_name": "dca1",
+          "field_type": "VARCHAR"
+        },
+        {
+          "field_name": "dc_name",
+          "field_type": "VARCHAR"
+        }
+      ]
+    },
+    {
+      "table_name": "dc",
+      "schema_name": "product",
+      "fields": [
+        {
+          "field_name": "pin",
+          "field_type": "INT"
+        },
+        {
+          "field_name": "dca1",
+          "field_type": "VARCHAR"
+        },
+        {
+          "field_name": "dca2",
+          "field_type": "VARCHAR"
+        }
+      ]
+    }
+  ]
+}

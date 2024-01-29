@@ -1,0 +1,158 @@
+{
+  "metadata": [
+    {
+      "table_name": "dc",
+      "schema_name": "meta",
+      "rows": [
+        {
+          "row": [
+            {
+              "column_name": "dc_id",
+              "column_value": "1"
+            },
+            {
+              "column_name": "dc_table",
+              "column_value": "vendor.dc"
+            },
+            {
+              "column_name": "dc_name",
+              "column_value": "dc"
+            }
+          ]
+        },
+        {
+          "row": [
+            {
+              "column_name": "dc_id",
+              "column_value": "2"
+            },
+            {
+              "column_name": "dc_table",
+              "column_value": "product.dc"
+            },
+            {
+              "column_name": "dc_name",
+              "column_value": "dc"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table_name": "dca",
+      "schema_name": "meta",
+      "rows": [
+        {
+          "row": [
+            {
+              "column_name": "dca_id",
+              "column_value": "1"
+            },
+            {
+              "column_name": "dc_id",
+              "column_value": "2"
+            },
+            {
+              "column_name": "dca_field_name",
+              "column_value": "dca1"
+            },
+            {
+              "column_name": "dca_name",
+              "column_value": "vendor_dca1"
+            }
+          ]
+        },
+        {
+          "row": [
+            {
+              "column_name": "dca_id",
+              "column_value": "2"
+            },
+            {
+              "column_name": "dc_id",
+              "column_value": "1"
+            },
+            {
+              "column_name": "dca_field_name",
+              "column_value": "dca2"
+            },
+            {
+              "column_name": "dca_name",
+              "column_value": "vendor_dca2"
+            }
+          ]
+        },
+        {
+          "row": [
+            {
+              "column_name": "dca_id",
+              "column_value": "3"
+            },
+            {
+              "column_name": "dc_id",
+              "column_value": "2"
+            },
+            {
+              "column_name": "dca_field_name",
+              "column_value": "dca1"
+            },
+            {
+              "column_name": "dca_name",
+              "column_value": "product_dca1"
+            }
+          ]
+        },
+        {
+          "row": [
+            {
+              "column_name": "dca_id",
+              "column_value": "4"
+            },
+            {
+              "column_name": "dc_id",
+              "column_value": "2"
+            },
+            {
+              "column_name": "dca_field_name",
+              "column_value": "dca2"
+            },
+            {
+              "column_name": "dca_name",
+              "column_value": "product_dca2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "table_name": "vin_pin_map",
+      "schema_name": "meta",
+      "rows": [
+        {
+          "row": [
+            {
+              "column_name": "vin_dca_id",
+              "column_value": "1"
+            },
+            {
+              "column_name": "pin_dca_id",
+              "column_value": "3"
+            }
+          ]
+        },
+        {
+          "row": [
+            {
+              "column_name": "vin_dca_id",
+              "column_value": "2"
+            },
+            {
+              "column_name": "pin_dca_id",
+              "column_value": "4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -28,15 +28,20 @@ planner = load_chat_planner(model, system_prompt)
 
 tools = [
     Tool.from_function(
-        func=get_tools.get_data_model,
-        name="Get data model",
-        description="get data model from meta schema.",
+        func=get_tools.get_db_schema,
+        name="Get database schema",
+        description="get table and field definition from database, input is string 'DB'.",
     ),
     Tool.from_function(
-        func=get_tools.get_data_info,
-        name="Get data information",
-        description="get data information as per the user query, input is one string of user query",
+        func=get_tools.get_meta_data,
+        name="Get meta data",
+        description="get meta data from database, input is string 'Meta'.",
     ),
+    # Tool.from_function(
+    #     func=get_tools.get_data_info,
+    #     name="Get data information",
+    #     description="get data information as per the user query, input is the string of user query",
+    # ),
 ]
 
 executor = load_agent_executor(model, tools, verbose=True)
@@ -44,4 +49,4 @@ executor = load_agent_executor(model, tools, verbose=True)
 agent = PlanAndExecute(planner=planner, executor=executor, verbose=True)
 
 langchain.debug = True
-agent.run("What is the change logic of the attribute 'maturity date'?")
+agent.run("What is the change logic of the data concept attribute 'product_dca2'?")

@@ -5,9 +5,16 @@ import weaviate
 from langchain.embeddings import OpenAIEmbeddings
 
 
-def get_data_model(userQuery: str) -> str:
-    response = [{"data model": "Unknown data model"}]
-    with open(r"data/concept.json") as meta_data_file:
+def get_db_schema(temp: str) -> str:
+    db_schema = [{"database schema": "Unknown database schema"}]
+    with open(r"data/table.json") as db_schema_file:
+        db_schema = json.load(db_schema_file)
+    return json.dumps(db_schema)
+
+
+def get_meta_data(temp: str) -> str:
+    meta_data = [{"meta data": "Unknown meta data"}]
+    with open(r"data/metadata.json") as meta_data_file:
         meta_data = json.load(meta_data_file)
     return json.dumps(meta_data)
 
