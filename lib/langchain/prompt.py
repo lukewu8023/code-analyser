@@ -31,5 +31,5 @@ Action:
   "action_input": "Final response to human"
 }}}}
 ```"""
-SUFFIX = """Begin! Reminder to ALWAYS respond with a valid json blob of a single action. Use tools if necessary. Respond directly if appropriate. Format is Action:```$JSON_BLOB```then Observation:.
+SUFFIX = """Begin! Respond directly if you know the answer based on the context and do not use tools. if not able to respond based on the context, go use tools and reminder to ALWAYS respond with a valid json blob of a single action. Format is Action:```$JSON_BLOB```then Observation:.
 Thought:"""
