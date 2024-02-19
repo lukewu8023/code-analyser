@@ -3,7 +3,7 @@ from openai import OpenAI
 
 client = OpenAI(
     base_url="https://api.ohmygpt.com/v1/",
-    api_key="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"
+    api_key=""
 )
 
 # JSON schemas to pass react-jsonschema-form, one for this provider's settings and one to describe the settings UI.
