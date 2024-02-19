@@ -28,7 +28,7 @@ def get_code_info(userQuery: str) -> str:
     response = (
         client.query.get("Codev1", ["method_summary"])
         .with_near_vector({"vector": embedded_query})
-        .with_limit(3)
+        .with_limit(1)
         .with_additional(["distance"])
         .do()
     )
