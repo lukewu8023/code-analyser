@@ -37,11 +37,11 @@ tools = [
         name="Get meta data",
         description="get meta data from database, input is string 'Meta'.",
     ),
-    # Tool.from_function(
-    #     func=get_tools.get_data_info,
-    #     name="Get data information",
-    #     description="get data information as per the user query, input is the string of user query",
-    # ),
+    Tool.from_function(
+        func=get_tools.get_code_info,
+        name="Get code information",
+        description="get related information from source code as per the user query, input is the string of user query",
+    ),
 ]
 
 executor = load_agent_executor(model, tools, verbose=True)
@@ -49,4 +49,5 @@ executor = load_agent_executor(model, tools, verbose=True)
 agent = PlanAndExecute(planner=planner, executor=executor, verbose=True)
 
 langchain.debug = True
-agent.run("What is the change logic of the data concept attribute 'product_dca2'?")
+# agent.run("What is the change logic of the data concept attribute 'product_dca2'?")
+agent.run("attribute 'product_dca2'")

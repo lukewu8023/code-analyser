@@ -19,8 +19,8 @@ def get_meta_data(temp: str) -> str:
     return json.dumps(meta_data)
 
 
-def get_data_info(userQuery: str) -> str:
-    response = [{"data model": "Unknown data model"}]
+def get_code_info(userQuery: str) -> str:
+    response = [{"code info": "Unknown code info"}]
 
     embeddings_model = OpenAIEmbeddings()
     embedded_query = embeddings_model.embed_query(userQuery)
