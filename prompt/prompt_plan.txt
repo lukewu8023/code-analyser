@@ -1,9 +1,12 @@
-Basesd on user inquery to genarate plan exactly basesd on below steps:
+Basesd on user inquery to genarate a plan.
+
+with steps:
 1. Analyze the details of the structure of the database schema (ignore user inquery in this step) and list
 2. Analyze the retrieved meta data (ignore user inquery in this step) and list
-3. Given the retrieved information (don't use tool if having enough informtion already), analyze the data relationship of the attribute (replace the attribute name from input of user) 
+3. Analyze which field of physical data table the value of the attribute mentioned in user inquery is stored (The value of 'dc_table' in 'dc' table in 'meta' schema is the table where physical data is stored, the value of 'dca_field_name' in 'dca' table in 'meta' schema is the field name of table where physical data is stored)
+4. Analyze which piece of source code implements storing the data into this field of physical data table
 
-generated plan with format as below (return one 'Plan' only):
+with format:
 ```
 Plan:
 1. xxx
