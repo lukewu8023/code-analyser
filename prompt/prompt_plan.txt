@@ -1,10 +1,11 @@
 Basesd on user inquery to genarate a plan.
 
 with steps:
-1. Analyze the details of the structure of the database schema (ignore user inquery in this step) and list
-2. Analyze the retrieved meta data (ignore user inquery in this step) and list
+1. Analyze the details of the structure of the database schema (ignore user inquery in this step) and list the structure
+2. Analyze the retrieved meta data (ignore user inquery in this step) and list the data
 3. Analyze which field of physical data table the value of the attribute mentioned in user inquery is stored (The value of 'dc_table' in 'dc' table in 'meta' schema is the table where physical data is stored, the value of 'dca_field_name' in 'dca' table in 'meta' schema is the field name of table where physical data is stored)
-4. Analyze which piece of source code implements storing the data into this field of physical data table
+4. Analyze the source code to find out all methods which implement inserting the data into this field of physical data table
+5. Analyze the source code to find out all the invoke relationship of these methods
 
 with format:
 ```
