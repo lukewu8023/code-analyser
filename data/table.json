@@ -67,7 +67,7 @@
           "field_type": "VARCHAR"
         },
         {
-          "field_name": "dc_name",
+          "field_name": "dca2",
           "field_type": "VARCHAR"
         }
       ]
