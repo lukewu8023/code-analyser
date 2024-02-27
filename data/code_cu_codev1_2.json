@@ -1,0 +1,13 @@
+{
+  "methods": [
+    {
+      "method_name": "getInsertStr",
+      "package_name": "com.example.demo.service",
+      "class_name": "ProductWrite",
+      "parameters": [],
+      "is_interface": false,
+      "invoked_methods": [],
+      "method_desc": "This method returns the value of the insertStr variable."
+    }
+  ]
+}
