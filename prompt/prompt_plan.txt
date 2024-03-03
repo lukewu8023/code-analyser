@@ -1,13 +1,13 @@
 Basesd on user inquery to genarate a plan.
 
-with steps:
+with below exact steps but replace attribute name in the plan with the attribute mentioned in user inquery:
 1. Analyze the details of the structure of the database schema (ignore user inquery in this step) and list the structure
 2. Analyze the retrieved meta data (ignore user inquery in this step) and list the data
-3. Analyze which field of physical data table the value of the attribute mentioned in user inquery is stored (The value of 'dc_table' in 'dc' table in 'meta' schema is the table where physical data is stored, the value of 'dca_field_name' in 'dca' table in 'meta' schema is the field name of table where physical data is stored)
-4. Analyze the source code to find out all methods which handes data insert
-5. Analyze the source code to find out all the invoke relationship of these methods
+3. Not use tool to analyze which field of physical data table the value of the attribute mentioned in user inquery is stored. The value of 'dc_table' in 'dc' table in 'meta' schema is the table where physical data is stored, the value of 'dca_field_name' in 'dca' table in 'meta' schema is the field name of table where physical data is stored.
+4. Analyze the source code to find out all methods which handles data insert (ignore user inquery in this step)
+5. Analyze the source code to find out which methods invoke these methods
 6. Analyze the source code, keep repeating to find all methods in the invoke chain till the top of the invoke chain
-7. Analyze the source code in these methods to discribe the logic of data (what original data from which source) is stored into this field
+7. Analyze the source code in these methods to discribe the logic of data (what original data from which source) is stored into this field, please notice it may not use sql to insert data but db mapping library.
 
 with format:
 ```
